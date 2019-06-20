@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * print a line showing an opening doublquite;
+ * main - Print a line
+ * Description: print a line showing an opening doublquite;
  * but not closing double quote;
  * followed by a newline.
+ * Return: 0
  */
 int main(void)
 {
