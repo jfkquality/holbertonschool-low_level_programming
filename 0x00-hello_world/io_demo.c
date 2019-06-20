@@ -5,7 +5,7 @@ int main(void)
   char f, m, l;
   int age;
 
-  printf("Enter your initials: ");
+  printf("Enter your 3 initials: ");
   scanf("%c %c %c", &f, &m, &l);
   printf("Enter your age: ");
   scanf("%d", &age);
