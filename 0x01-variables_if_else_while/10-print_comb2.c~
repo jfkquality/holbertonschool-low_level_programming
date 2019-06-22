@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+/**
+ * main - Print all combinations of 2 digit numbers of digits 0-9
+ * Description: Print all combinations of 2 digit numbers of digits 0-9.
+ * Should be 100 numbers: 0-99
+ * Return: 0
+ */
+int main(void)
+{
+	int n;
+
+
+	n = 0;
+	while (n < 10)
+	{
+		/* + '0' adds ASCII 0 to convert n to a char */
+		putchar(n % 10 + '0');
+		n++;
+	}
+	putchar('\n');
+
+
+	return (0);
+}
