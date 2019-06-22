@@ -3,7 +3,7 @@
 /**
  * main - Print numbers 1-10
  * Description: Print numbers 1-10.
- * Result 0
+ * Return: 0
  */
 int main(void)
 {
