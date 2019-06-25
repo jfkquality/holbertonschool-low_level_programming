@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - print alphabet in lower case
- * Description. Print alphabet in lower case.
+ * main - print alphabet backward
+ * Description. Print alphabet backward.
  * Return: 0
  */
 int main(void)
 {
 	char c;
 
-	c = 'a';
+	c = 'z';
 
-	while (c <= 'z')
+	while (c >= 'a')
 	{
 		putchar(c);
-		c++;
+		c--;
 	}
 	putchar('\n');
 

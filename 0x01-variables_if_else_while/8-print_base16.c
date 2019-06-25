@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - print numbers
- * Description. Print numbers 0-10
+ * main - Print all hex numbers
+ * Description: Print all hex numbers, 0-f.
  * Return: 0
  */
 int main(void)
 {
 	int n;
+	char x;
 
 
 	n = 0;
@@ -17,7 +18,14 @@ int main(void)
 		putchar(n % 10 + '0');
 		n++;
 	}
+	x = 'a';
+	while (x < 'g')
+	{
+		putchar(x);
+		x++;
+	}
 	putchar('\n');
+
 
 	return (0);
 }
