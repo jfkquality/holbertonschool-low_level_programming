@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "stdio.h"
 #include "holberton.h"
 
 /**
@@ -6,12 +6,12 @@
  * leap years into account
  * Return: 0
  */
-
 int main(void)
 {
 	int month;
 	int day;
 	int year;
+
 	int convert_day(int month, int day);
 	int print_remaining_days(int month, int day, int year);
 
