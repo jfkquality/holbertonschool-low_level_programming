@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <string.h>
 
 /*
@@ -8,7 +7,6 @@
 
 int main(void)
 {
-	char _putchar(char string);
 	char my_string;
 
 	my_string = "Holberton";
