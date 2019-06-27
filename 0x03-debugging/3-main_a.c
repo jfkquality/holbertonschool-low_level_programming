@@ -1,7 +1,9 @@
 #include "holberton.h"
 
+/**
 int convert_day(int, int);
 int print_remaining_days(int, int, int);
+*/
 
 /**
  * main - takes a date and prints how many days are left in the year, taking
