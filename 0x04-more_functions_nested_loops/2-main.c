@@ -3,7 +3,7 @@
 
 /**
  * main - check the code for Holberton School students.
- * Description: multiply 2 numberts
+ * Description: multiply 2 numbers
  * Return: Always 0
  */
 int main(void)
