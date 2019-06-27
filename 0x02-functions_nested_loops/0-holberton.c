@@ -9,7 +9,7 @@
 int main(void)
 {
 	char my_string[] = "Holberton";
-	unsigned int i;
+	int i;
 /*
  *	int length = strlen(my_string);
  */
