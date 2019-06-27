@@ -2,7 +2,7 @@
 
 /*
  * main - print Holberton
- * Description:
+ * Description: Write a program that prints Holberton, followed by a new line.
  * Result: 0
  */
 
