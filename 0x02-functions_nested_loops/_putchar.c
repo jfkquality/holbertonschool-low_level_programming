@@ -1,22 +1,13 @@
-#include <stdio.h>
-#include <string.h>
-#include "holberton.h"
+#include <unistd.h>
 
-char _putchar(char my_string[])
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
 {
-	int length;
-
-	length = strlen(my_string);
-
-	int i;
-
-	i = 0;
-
-	for (i=0; i<length; i++)
-	{
-		putchar(my_string[i]);	
-	}
-	putchar('\n');
-
-	return (0);
+	return (write(1, &c, 1));
 }
