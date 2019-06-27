@@ -4,6 +4,7 @@
 
 /*
  * main - print Holberton
+ * Description:
  * Result: 0
  */
 
@@ -12,13 +13,13 @@ int main(void)
 	char my_string[] = "Holerton";
 	unsigned int i;
 
-	i=0;
-	for (i=0; i < strlen(my_string);i++)
+	i = 0;
+	for (i = 0; i < strlen(my_string); i++)
 	{
 		_putchar(my_string[i]);
 		/*i++;*/
 	}
 	putchar('\n');
 
-       	return 0;
+	return (0);
 }
