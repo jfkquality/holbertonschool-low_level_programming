@@ -6,5 +6,6 @@
 void positive_or_negative(int i);
 int _putchar(char);
 int _isupper(int);
+int _isdigit(int);
 
 #endif /* HOLBERTON_H */
