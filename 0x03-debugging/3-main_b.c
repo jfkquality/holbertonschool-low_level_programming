@@ -11,8 +11,10 @@ int main(void)
 	int day;
 	int year;
 
-	int convert_day(int month, int day);
-	int print_remaining_days(int month, int day, int year);
+/**
+ *	int convert_day(int month, int day);
+ *	int print_remaining_days(int month, int day, int year);
+*/
 
 	month = 2;
 	day = 29;
