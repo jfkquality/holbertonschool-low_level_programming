@@ -10,7 +10,8 @@ int main(void)
 {
 	char my_string[] = "Holberton";
 	unsigned int i;
-/*	int length = strlen(my_string);
+/*
+ *	int length = strlen(my_string);
  */
 	i = 0;
 	for (i = 0; i < 9; i++)
