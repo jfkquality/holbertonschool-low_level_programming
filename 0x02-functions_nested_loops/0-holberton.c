@@ -1,7 +1,7 @@
 #include "holberton.h"
 
-/*
- * main - print Holberton
+/**
+ * main - print Holberton with _putchar function
  * Description: Write a program that prints Holberton, followed by a new line.
  * Result: 0
  */
