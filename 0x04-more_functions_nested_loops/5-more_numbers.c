@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print number 0-9
+ * more_numbers - print number 0-4 ten times
  * Return: void
  */
 void more_numbers(void)
