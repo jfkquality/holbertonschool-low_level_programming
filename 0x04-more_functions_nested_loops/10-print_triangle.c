@@ -2,15 +2,16 @@
 #include "holberton.h"
 
 /**
- * print_square - print a square
+ * print_triangle - print a triangle
  * @n: parameter
  * Return: void
  */
 
-void print_square(int n)
+void print_triangle(int n)
 {
 	int i;
 	int j;
+	int k;
 
 	if (n <= 0)
 		_putchar('\n');
@@ -18,8 +19,11 @@ void print_square(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-/*			_putchar('#'); */
-			for (j = 0; j < n; j++)
+			for (j = 1; j < n - i; j++)
+			{
+				_putchar('.');
+			}
+			for (k = 0; k < i; k++)
 			{
 				_putchar('#');
 			}
