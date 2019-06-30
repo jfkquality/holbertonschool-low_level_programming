@@ -48,11 +48,11 @@ void print_number2(int num, int count, int ten)
 
 	int digits(int a);
 
-	if (n == 0)
-		_putchar(0 + '0');
+	if (c == 1 || n == 0)
+		_putchar(n + '0');
 	else
 	{
-	while (c > 1)
+	while (c > 0)
 	{
 		x = n;
 		n = n / tens; /* Leading digit */
