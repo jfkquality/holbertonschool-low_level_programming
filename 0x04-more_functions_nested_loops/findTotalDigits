@@ -1,0 +1,10 @@
+include<stdio.h>
+//2
+int findTotalDigits(int no){
+  //3
+  if(no == 0){
+    return 0;
+  }
+  //4
+  return 1 + findTotalDigits(no/10);
+}
