@@ -78,8 +78,9 @@ void print_number2(int num, int count, int ten)
 		n = x;
 	}
 	}
-	_putchar('\n');
 }
+
+
 
 
 /**
