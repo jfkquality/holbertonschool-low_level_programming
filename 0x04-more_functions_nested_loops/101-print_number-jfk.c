@@ -19,13 +19,15 @@ void print_number(int n)
 		tens *= 10;
 		b--;
 	}
-	if (n == 0)
-		_putchar(0 + '0');
+	if (c == 1 || n == 0)
+		_putchar(n + '0');
+	else
+	{
 	while (c > 0 )
 	{
 		x = n;
 		n = n / tens; /* Leading digit */
-		if (x > 9)
+		if (c > 1)
 			x = x % (n * tens); /* Remaining number(s). If embedded 0's, will be < digits left */
 	 	d = digits(x);
 		if (n == 0) /* print last digit */
@@ -50,7 +52,7 @@ void print_number(int n)
 		
 		n = x;
 	}
-
+	}
 		_putchar('\n');
 	
 }

@@ -50,13 +50,11 @@ void print_number2(int num, int count, int ten)
 
 	if (n == 0)
 		_putchar(0 + '0');
-	else
-	{
 	while (c > 1)
 	{
 		x = n;
 		n = n / tens; /* Leading digit */
-		if (c > 1)
+		if (x > 9)
 			x = x % (n * tens); /* Remaining number(s). For embedded 0's */
 		d = digits(x);
 		if (n == 0) /* print last digit */
@@ -76,7 +74,6 @@ void print_number2(int num, int count, int ten)
 		if (tens > 10)
 			tens /= 10;
 		n = x;
-	}
 	}
 	_putchar('\n');
 }
