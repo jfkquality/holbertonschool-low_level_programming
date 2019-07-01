@@ -41,7 +41,7 @@ int main(void)
  
   print_number(INT_MIN);
   _putchar('\n');
-  print_number(123456789);
+  print_number(-2147483647);
   _putchar('\n');
 
   return (0);

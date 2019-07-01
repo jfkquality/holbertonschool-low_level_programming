@@ -1,0 +1,23 @@
+include <stdio>
+
+
+int main(void)
+{
+
+	/*
+	* Description: Print a circle 
+	* Set the radius
+	* Print one line of "*" or "#" up half the radius.
+	* Start with 2 characters at the mid point of the radius
+	* Increase each line by 2 until it equals the radius
+	* Reverse these steps to print the bottom half ofthe circle 
+	*/
+
+	int r;
+
+	for (i = 1; i <= r/2; i++)
+	{
+pp
+	} 
+}
+

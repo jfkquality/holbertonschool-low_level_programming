@@ -1,4 +1,4 @@
-int is_prime(int n) 
+int isPrime(int n) 
 {
 	// Corner cases 
 	if (n <= 1)
@@ -18,19 +18,5 @@ int is_prime(int n)
 	}
 
 	return (1)
-)
 
 
-int main(void)
-{
-
-	int n;
-	int d;
-	int f;
-	int p;
-
-	if (is_prime(n)
-	    printf("%d is prime", n);
-	if (n % d == 0)
-		
-}
