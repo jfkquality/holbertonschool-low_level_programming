@@ -17,6 +17,9 @@ void print_rev(char *s)
 		s2++;
 		i++;
 	}
+	printf("%p\n", s);
+	printf("%p\n", s2);
+	printf("%d\n", i);
 
 	while (i >= 0)
 	{
@@ -25,4 +28,7 @@ void print_rev(char *s)
 		i--;
 	}
 	_putchar('\n');
+	printf("%p\n", s);
+	printf("%p\n", s2);
+
 }
