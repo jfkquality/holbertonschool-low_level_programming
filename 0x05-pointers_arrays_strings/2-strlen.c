@@ -3,8 +3,8 @@
 
 /**
  * _strlen - Get the length of a string
- * @c: counter
- * @s: string.
+ *
+ * @s: string parament
  *
  * Return: c.
  */
