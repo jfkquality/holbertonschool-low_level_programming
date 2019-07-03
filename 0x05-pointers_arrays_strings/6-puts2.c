@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * _puts - print every other character of  a string
+ * puts2 - print every other character of  a string
  * @s: input string pointer
  * Return: void
  */
-void _puts(char *s)
+void puts2(char *s)
 {
 	char *s2 = s;
 
