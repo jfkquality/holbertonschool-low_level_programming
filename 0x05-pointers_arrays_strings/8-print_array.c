@@ -11,18 +11,8 @@
  */
 void print_array(int *a, int n)
 {
-	int i, j = 0;
-	int *a1 = a;
+	int i = 0;
 	int *a2 = a;
-
-	while (*a1 != '\0')
-	{
-		j++;
-		a1++;
-	}
-
-	j--;
-
 
 	while (i < n - 1)
 	{
