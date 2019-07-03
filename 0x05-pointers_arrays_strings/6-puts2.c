@@ -22,7 +22,7 @@ void puts2(char *s)
 	{
 		_putchar(*s1);
 		s1 += 2;
-		h -=2;
+		h -= 2;
 	}
 	_putchar('\n');
 }
