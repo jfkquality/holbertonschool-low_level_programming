@@ -8,9 +8,9 @@
 
 int main(void)
 {
-       	char *str;
+	char *str;
 
- 	void puts2(char *str);
+	void puts2(char *str);
 
 	str = "0123456789";
 	puts2(str);
