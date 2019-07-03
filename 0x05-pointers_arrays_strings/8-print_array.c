@@ -23,9 +23,6 @@ void print_array(int *a, int n)
 
 	j--;
 
-	if (n > j)
-		n = j;
-
 
 	while (i < n - 1)
 	{
