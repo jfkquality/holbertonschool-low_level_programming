@@ -11,13 +11,26 @@
  */
 void print_array(int *a, int n)
 {
-	int i = 0;
+	int i, j = 0;
 	int *a1 = a;
+	int *a2 = a;
+
+	while (*a1 != '\0')
+	{
+		j++;
+		a1++;
+	}
+
+	j--;
+
+	if (n > j)
+		n = j;
+
 
 	while (i < n - 1)
 	{
-		printf("%d, ", *(a1 + i));
+		printf("%d, ", *(a2 + i));
 		i++;
 	}
-	printf("%d\n", *(a1 + i));
+	printf("%d\n", *(a2 + i));
 }
