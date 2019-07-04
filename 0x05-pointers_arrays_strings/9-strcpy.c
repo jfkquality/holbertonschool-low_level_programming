@@ -7,38 +7,37 @@
  * dest: string pointer parameter
  * src: string pointer parament
  *
- * Return: c.
+ * Return: dest.
  */
 char *_strcpy(char *dest, char *src)
 {
 	int c, i = 0;
-	char *src2;
-	char *src3;
-	char *dest2;
+	char *src2 = src;
 
 
-	src2 = src;
-	src3 = src;
-	dest2 = dest;
-
-	while (*src2 != '\0')
+	while (*(src2 + c) != '\0')
 	{
-		src2++;
 		c++;
 	}
-
+	/*
 	printf("%d\n", c);
 
-	while (c >= 0)
+	printf("hello %s", src);
+
+	printf("%d\n", *src);
+	*/
+
+	for (i = 0; i <= c; i++)
 	{
-	  *(src3 + i) = *(dest2 + i);
-	  i++;
-	  c--;
+	  /*
+	  printf("%d ", *src2++);
+	  */
+	  *(dest + i) = *(src + i);
 	}
+	/*
+	printf("\n%p\n", dest);
+	*/
 
-	printf("%p\n", dest2);
-
-	dest = dest2;
 
 	return (dest);
 }
