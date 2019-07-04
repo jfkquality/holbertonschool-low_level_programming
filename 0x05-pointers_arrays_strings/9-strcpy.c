@@ -34,9 +34,8 @@ char *_strcpy(char *dest, char *src)
 	  */
 	  *(dest + i) = *(src + i);
 	}
-	/*
-	printf("\n%p\n", dest);
-	*/
+
+	printf("%s", dest);
 
 
 	return (dest);
