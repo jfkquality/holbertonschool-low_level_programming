@@ -3,10 +3,8 @@
 
 /**
  * _strcpy - Copy a src string to a dest string
- *
  * @dest: string pointer parameter
  * @src: string pointer parament
- *
  * Return: dest.
  */
 char *_strcpy(char *dest, char *src)
