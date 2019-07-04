@@ -13,7 +13,8 @@ int main(void)
 
 	char *_strcpy(char *dest, char *src);
 
-	p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+	p = _strcpy(s1, "\n");
+		    /* "First, solve the problem. Then, write the code\n"); */
 	printf("%s", s1);
 	printf("%s", p);
 	return (0);

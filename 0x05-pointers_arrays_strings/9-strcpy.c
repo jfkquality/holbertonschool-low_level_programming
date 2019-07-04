@@ -4,8 +4,8 @@
 /**
  * _strcpy - Copy a src string to a dest string
  *
- * dest: string pointer parameter
- * src: string pointer parament
+ * @dest: string pointer parameter
+ * @src: string pointer parament
  *
  * Return: dest.
  */
@@ -20,19 +20,19 @@ char *_strcpy(char *dest, char *src)
 		c++;
 	}
 	/*
-	printf("%d\n", c);
-
-	printf("hello %s", src);
-
-	printf("%d\n", *src);
+	 *	printf("%d\n", c);
+	 *
+	 *	printf("hello %s", src);
+	 *
+	 *	printf("%d\n", *src);
 	*/
 
 	for (i = 0; i <= c; i++)
 	{
 	  /*
-	  printf("%d ", *src2++);
+	   *	  printf("%d ", *src2++);
 	  */
-	  *(dest + i) = *(src + i);
+		*(dest + i) = *(src + i);
 	}
 
 	printf("%s", dest);
