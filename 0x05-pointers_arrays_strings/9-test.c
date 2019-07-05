@@ -12,10 +12,9 @@ int main(void)
 	char *p;
 
 	char *_strcpy(char *dest, char *src);
-
 	p = _strcpy(s1, "Holberton!\n");
-
 	printf("%s", s1);
 	printf("%s", p);
+
 	return (0);
 }
