@@ -25,7 +25,6 @@ char *_strcpy(char *dest, char *src)
 	 *	printf("%d\n", *src);
 	*/
 
-	c++;
 	for (i = 0; i <= c; i++)
 	{
 	  /*
