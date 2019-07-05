@@ -17,6 +17,9 @@ char *_strcpy(char *dest, char *src)
 	{
 		c++;
 	}
+
+	if (*(src2 + c) == '\0')
+		printf("%d %s\n",*(src + c), "hi");
 	/*
 	 *	printf("%d\n", c);
 	 *
@@ -25,13 +28,18 @@ char *_strcpy(char *dest, char *src)
 	 *	printf("%d\n", *src);
 	*/
 
-	for (i = 0; i <= c; i++)
+	for (i = 0; i < c; i++)
 	{
 	  /*
 	   *	  printf("%d ", *src2++);
 	  */
 		*(dest + i) = *(src + i);
 	}
+
+	*(dest + i) = *(src + i);
+
+	if (*(dest + i) == '\0') 
+		printf("%d %s\n", *(dest + i), "bye");
 
 	printf("%s", dest);
 
