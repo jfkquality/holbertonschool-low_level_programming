@@ -18,11 +18,9 @@
 	if (dest == NULL || src == NULL)
 		return (NULL);
 
-	while (*src2 != '\0')
+	for(; *src2 != '\0'; src2++, dest2++)
 	{
 		*dest2 = *src2;
-		src2++;
-		dest2++;
 	}
 	*dest2 = *src2;
 
