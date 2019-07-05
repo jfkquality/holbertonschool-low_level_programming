@@ -19,7 +19,7 @@ char *_strcpy(char *dest, char *src)
 	}
 
 	if (*(src2 + c) == '\0')
-		printf("%d %s\n",*(src + c), "hi");
+		printf("%d %s\n", *(src + c), "hi");
 	/*
 	 *	printf("%d\n", c);
 	 *
@@ -38,7 +38,7 @@ char *_strcpy(char *dest, char *src)
 
 	*(dest + i) = *(src + i);
 
-	if (*(dest + i) == '\0') 
+	if (*(dest + i) == '\0')
 		printf("%d %s\n", *(dest + i), "bye");
 
 	printf("%s", dest);
