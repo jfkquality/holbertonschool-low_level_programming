@@ -16,7 +16,7 @@
 	char *dest2 = dest;
 
 	if (dest == NULL || src == NULL)
-		return NULL;
+		return (NULL);
 
 	while (*src2 != '\0')
 	{
