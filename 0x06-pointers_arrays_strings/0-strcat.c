@@ -7,6 +7,7 @@
  * @src: string pointer parament
  * Return: dest.
  */
+char *_strcat(char *dest, char *src)
 {
 	char *dest2 = dest;
 	char *src2 = src;
