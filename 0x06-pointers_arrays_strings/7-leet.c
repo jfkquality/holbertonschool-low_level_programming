@@ -16,17 +16,24 @@ char *leet(char *str)
 	*/
 
 	char *s1 = str;
+	char *c = "aAeEoOtT";
+	char *c1 = "44330077";
+	char *d = c;
+	char *d1 = c1;
+
+	/* char *c1 = c; */
 
 	while (*s1 != '\0')
 	{
-		if (*s1 == 'a' || *s1 == 'A')
-			*s1 = '4';
-		else if (*s1 == 'e' || *s1 == 'E')
-			*s1 = '3';
-		else if (*s1 == 'o' || *s1 == 'O')
-			*s1 = '0';
-		else if (*s1 == 't' || *s1 == 't')
-			*s1 = '7';
+		d = c;
+		d1 = c1;
+		while (*d != '\0')
+		{
+			if (*s1 == *d)
+				*s1 = *d1;
+			d++;
+			d1++;
+		}
 		s1++;
 	}
 	return (str);
