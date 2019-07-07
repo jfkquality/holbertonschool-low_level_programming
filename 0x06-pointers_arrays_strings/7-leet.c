@@ -26,7 +26,7 @@ char *leet(char *str)
 		if (*s1 == 'o' || *s1 == 'O')
 			*s1 = '0';
 		if (*s1 == 't' || *s1 == 't')
-			*s1 = 'y';
+			*s1 = '7';
 		s1++;
 	}
 	return (str);
