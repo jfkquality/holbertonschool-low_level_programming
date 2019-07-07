@@ -2,22 +2,26 @@
 #include <stdio.h>
 
 /**
- * _strcmp - compare a src string to a dest string
+ * _strcmp - compare 2 stings
  * @s1: string pointer parameter
  * @s2: string pointer parament
- * Return: -1, 0 or 1.
+ * Return: The diff between the letters.
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
+	int c1 = 0;
+	int c2 = 0;
 	char *src1 = s1;
 	char *src2 = s2;
 
-	for (; *src1 != '\0'; src1++, i++)
+	for (; *src1 != '\0' && *src2 != '\0'; src1++, srr2++, c1++)
+		if (
 		;
 
-	for (; *src2 != '\0'; src2++, j++)
+	for (; *src1 != '\0'; src1++, c1++)
+		;
+
+	for (; *src2 != '\0'; src2++, c2++)
 		;
 
 	if (s1 < s2)
