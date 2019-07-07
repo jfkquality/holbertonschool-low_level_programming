@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * _strcmp - compare a src string to a dest string 
- * @dest: string pointer parameter
- * @src: string pointer parament
+ * _strcmp - compare a src string to a dest string
+ * @s1: string pointer parameter
+ * @s2: string pointer parament
  * Return: -1, 0 or 1.
  */
 int _strcmp(char *s1, char *s2)
@@ -17,7 +17,7 @@ int _strcmp(char *s1, char *s2)
 	for (; *src1 != '\0'; src1++, i++)
 		;
 
-	for (; *src2 != '\0'; src2++, j++ )
+	for (; *src2 != '\0'; src2++, j++)
 		;
 
 	if (s1 < s2)
