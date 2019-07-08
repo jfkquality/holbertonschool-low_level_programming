@@ -9,7 +9,8 @@
 char *rot13(char *str)
 {
 	/**
-	* "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n""
+	* "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13)
+	* is a simple letter substitution cipher.\n"
 	*/
 
 	char *s1 = str;
