@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * print_number - print any integer
@@ -10,11 +11,15 @@ void print_number(int n)
 {
 	int c = 0;
 	int b = 0;
+	int n1 = n;
 	int tens = 1;
 
 	int digits(int a);
-	void print_number2(int j, int f, int k);
+	void print_number2(int j, int f, int k, int j1);
 
+        if (n == INT_MIN)
+		n++;
+ 
 	if (n < 0)
 	{
 		n = -n;
@@ -28,7 +33,7 @@ void print_number(int n)
 		b--;
 	}
 
-	print_number2(n, c, tens);
+	print_number2(n, c, tens, n1);
 
 
 }
@@ -41,11 +46,12 @@ void print_number(int n)
  * @ten: 10 to the pwoer of count
  * Return: 0
  */
-void print_number2(int num, int count, int ten)
+void print_number2(int num, int count, int ten, int num1)
 {
 	int c = count;
 	int d, x = 0;
 	int n = num;
+	int n1 = num1;
 	int tens = ten;
 
 	int digits(int a);
@@ -62,8 +68,11 @@ void print_number2(int num, int count, int ten)
 			x = x % (n * tens); /* Remaining number(s). For embedded 0's */
 		d = digits(x);
 		if (n == 0) /* print last digit */
-			_putchar(x % 10 + '0');
-
+		{
+			if (n1 == INT_MIN)
+				x++;
+		  _putchar(x % 10 + '0');
+		}
 		else
 		{
 			_putchar(n + '0');

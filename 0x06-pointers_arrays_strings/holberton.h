@@ -17,7 +17,7 @@ void print_square(int);
 void print_triangle(int);
 void print_number(int n);
 int digits(int);
-void print_number2(int, int, int);
+void print_number2(int, int, int, int);
 
 char *_strcat(char *, char *);
 char *_strncat(char *, char *, int);
