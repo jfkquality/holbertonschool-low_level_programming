@@ -1,6 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 
+int is_separator(char *);
+
 /**
  * cap_string - capitalize all words of a string
  * @str: passed array as pointer
@@ -15,19 +17,30 @@ char *cap_string(char *str)
    * 4. Repeat from step 2 until end of source.
   */
 	char *s1 = str;
-	char *test = " \t\n,;.!?\"(){}";
-	char *test2 = test;
 
-	while (*s1 != '\0')
+	while (*s1)
 	{
-	  while (*test2 != '\0')
-	  {
-	    if (*s1 == *test2)
-
-		if (*s1 >= 'a' && *s1 <= 'z')
-			*s1 = *s1 - 32;
+	/* If it's the first char in str, or the char before is a separator, cap it */
+		if (s1 == str || is_separator(s1 - 1))
+		{
+		    if (*s1 >= 'a' && *s1 <= 'z')
+			    *s1 = *s1 - 'a' + 'A';
+		}
 		s1++;
-	  }
 	}
 	return (str);
+}
+
+
+int is_separator(char *c)
+{
+	char separators[] = "' '\t\n,;.!?\"(){}";
+	char *sep2 = separators;
+	while (*sep2)
+	{
+		if (*c == *sep2)
+			return (1);
+		sep2++;
+	}
+	return (0);
 }
