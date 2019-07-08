@@ -1,1 +1,1 @@
-vagrant@vagrant-ubuntu-trusty-64.1238:1561828357
+vagrant@vagrant-ubuntu-trusty-64.2271:1561828357
