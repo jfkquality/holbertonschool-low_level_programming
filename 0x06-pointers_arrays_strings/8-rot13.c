@@ -2,26 +2,21 @@
 #include <stdio.h>
 
 /**
- * leet - convert string to leet
+ * rot13 - convert string to rot13 encoding
  * @str: passed array as pointer
  * Return: string
  */
-char *leet(char *str)
+char *rot13(char *str)
 {
 	/**
-	* Letters a and A should be replaced by 4
-	* Letters e and E should be replaced by 3
-	* Letters o and O should be replaced by 0
-	* Letters t and T should be replaced by 7
+	* "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n""
 	*/
 
 	char *s1 = str;
-	char *c = "aAeEoOtT";
-	char *c1 = "44330077";
+	char *c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *c1 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *d = c;
 	char *d1 = c1;
-
-	/* char *c1 = c; */
 
 	while (*s1 != '\0')
 	{
