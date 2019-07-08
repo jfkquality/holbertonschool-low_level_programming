@@ -13,11 +13,12 @@ char *leet(char *str)
 	* Letters e and E should be replaced by 3
 	* Letters o and O should be replaced by 0
 	* Letters t and T should be replaced by 7
+	* Letters l and L should be replaced by 1
 	*/
 
 	char *s1 = str;
-	char *c = "aAeEoOtT";
-	char *c1 = "44330077";
+	char *c = "aAeEoOtTlL";
+	char *c1 = "4433007711";
 	char *d = c;
 	char *d1 = c1;
 
