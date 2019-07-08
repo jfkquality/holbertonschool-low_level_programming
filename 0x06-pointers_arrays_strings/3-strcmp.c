@@ -13,6 +13,7 @@ int _strcmp(char *s1, char *s2)
 	/* int c2 = 0; */
 	char *src1 = s1;
 	char *src2 = s2;
+	int diff = 0;
 	/* char *src1a = s1; */
 	/* char *src2a = s2; */
 
@@ -20,7 +21,11 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*src1 != *src2)
 		{
-			return src1 - src2;
+			diff = src1 - src2;
+			if (src1 < src2)
+				return (++diff);
+			else
+				return (--diff);
 		}
 	}
 	return (0);
