@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * _strspn - finc sub string in a string
+ * @s: pointer to string to search
+ * @accept: chars to compare tod
+ *
+ * Return: pointer to found char or NULL.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	char *s1 = s;
@@ -21,7 +28,7 @@ unsigned int _strspn(char *s, char *accept)
 				total_c++;
 				break;
 			}
-			acc1++; 
+			acc1++;
 		}
 		if (this_c == 0)
 			return (total_c);
