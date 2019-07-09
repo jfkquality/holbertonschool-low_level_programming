@@ -20,7 +20,6 @@ char *_strchr(char *s, char c)
 		s1++;
 	}
 	if (*s1 == c1)
-		printf ("%d\n",*s1);
 		return (s1);
-	return NULL;
+	return ('\0');
 }
