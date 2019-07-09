@@ -20,4 +20,5 @@ int digits(int);
 void print_number2(int, int, int);
 
 char *_memset(char *, char, unsigned int);
+char *_memcpy(char *, char *, unsigned int);
 #endif /* HOLBERTON_H */
