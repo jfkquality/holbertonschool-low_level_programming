@@ -21,4 +21,5 @@ void print_number2(int, int, int);
 
 char *_memset(char *, char, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
+char *_strchr(char *, char);
 #endif /* HOLBERTON_H */
