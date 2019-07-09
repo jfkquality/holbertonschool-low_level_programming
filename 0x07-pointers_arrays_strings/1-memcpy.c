@@ -1,8 +1,8 @@
 /**
- * _memset - prints buffer in hexa
- * @s: the address of memory to print
- * @n: the size of the memory to print
- * @b: char to print
+ * _memcpy - copy buffer in hexa
+ * @dest: the address of memory to print to
+ * @src: the addres of the memory to print
+ * @n: # of chars from src to print
  *
  * Return: Nothing.
  */
