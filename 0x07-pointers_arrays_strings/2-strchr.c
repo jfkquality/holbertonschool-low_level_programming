@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _strchr - finc char in a string
@@ -21,5 +20,5 @@ char *_strchr(char *s, char c)
 	}
 	if (*s1 == c1)
 		return (s1);
-	return (NULL);
+	return ('\0');
 }
