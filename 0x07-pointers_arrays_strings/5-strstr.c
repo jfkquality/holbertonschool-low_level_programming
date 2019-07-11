@@ -39,10 +39,9 @@ char *_strstr(char *haystack, char *needle)
 			hay2++;
 			need2++;
 		}
+		if (!*need2)
+			return (hay2 - size_n);
 		hay2++;
 	}
-		if (!*need1)
-			return (hay2 - size_n - 1);
-		else
-			return (0);
+	return (0);
 }
