@@ -2,20 +2,34 @@
 #include <stdio.h>
 
 /**
- * sqrt_recursion(int n) - find sqrt
+ * factor - find sqrt factors
+ * @sq: square numb
+ * @f: factor
+ *
+ * Return: result
+ */
+int factor(int sq, int f)
+{
+	if (f * f > sq)
+		return (-1);
+	if (f * f < sq)
+	{
+		return (factor(sq, f + 1));
+	}
+	return (f);
+}
+
+/**
+ * _sqrt_recursion - find sqrt
  * @n: numb
  *
  * Return: result
  */
 int _sqrt_recursion(int n)
 {
-	int x1 = x;
-	int y1 = y;
+	int n1 = n;
 
-	if (y1 < 0)
-		return (-1);
-	else if (y1 == 0)
-		return (1);
-	else
-		return (x1 * _pow_recursion(x1, y - 1));
+	return (factor(n1, 1));
 }
+
+
