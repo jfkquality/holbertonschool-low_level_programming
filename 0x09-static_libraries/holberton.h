@@ -36,7 +36,7 @@ unsigned int _strspn(char *, char *);
 char *_strpbrk(char *, char *);
 char *_strstr(char *, char *);
 char *_strcpy(char *, char *);
-int abs(int);
+int _abs(int);
 int _atoi(char *);
 int _isaplha(int);
 #endif /* HOLBERTON_H */
