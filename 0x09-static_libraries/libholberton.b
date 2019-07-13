@@ -1,4 +1,8 @@
 !<arch>
+//                                              38        `
+100-atoi-dummy.c/
+4-isalpha-dummy.c/
+
 0-isupper.c/    1563052148  1000  1000  100664  318       `
 #include <stdio.h>
 #include "holberton.h"
@@ -66,7 +70,7 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 
-100-atoi.c/     1563046357  1000  1000  100664  44        `
+/0              1563046357  1000  1000  100664  44        `
 int _atoi(char *s)
 {
   s++;
@@ -317,7 +321,7 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (total_c);
 }
-4-isalpha.c/    1563046194  1000  1000  100664  38        `
+/18             1563046194  1000  1000  100664  38        `
 int _isaplha(int c)
 {
   return (c);
@@ -404,7 +408,7 @@ char *_strstr(char *haystack, char *needle)
 	return (0);
 }
 
-6-abs.c/        1563046114  1000  1000  100664  33        `
+6-abs-dummy.c/  1563046114  1000  1000  100664  33        `
 int abs(int n)
 {
   return (n);
