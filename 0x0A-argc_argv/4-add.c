@@ -17,7 +17,7 @@ bool isnumber(char number[])
 
 	/* check for neg numbers */
 	/* if (number[0] == '-') */
-	/* 	j = 1; */
+	/*	j = 1; */
 
 	while (number[j] != 0)
 	{
