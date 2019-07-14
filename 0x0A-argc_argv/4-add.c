@@ -16,8 +16,8 @@ bool isnumber(char number[])
 	int j = 0;
 
 	/* check for neg numbers */
-	if (number[0] == '-')
-		j = 1;
+	/* if (number[0] == '-') */
+	/* 	j = 1; */
 
 	while (number[j] != 0)
 	{
