@@ -66,7 +66,6 @@ int main(int argc, __attribute__ ((unused)) char *argv[])
 			if (amt / coin > 0 && amt % coin == 0)
 			{
 				change += amt / coin;
-				printf("amt is %d. coin is %d. change is %d\n", amt, coin, change);
 				break;
 			}
 			if (amt / coin > 0)
