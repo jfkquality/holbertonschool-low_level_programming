@@ -14,7 +14,7 @@ int main(int argc, __attribute__ ((unused)) char *argv[])
 
 	if (argc <= 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
