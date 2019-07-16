@@ -35,5 +35,5 @@ char *_strpbrk(char *, char *);
 char *_strcpy(char *, char *);
 int _abs(int);
 int _atoi(char *);
-int _isaplha(int);
+int _isalpha(int);
 #endif /* HOLBERTON_H */
