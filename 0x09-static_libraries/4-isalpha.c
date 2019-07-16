@@ -1,4 +1,4 @@
-int _isaplha(int c)
+int _isalpha(int c)
 {
   return (c);
 }
