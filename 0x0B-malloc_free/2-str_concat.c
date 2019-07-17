@@ -20,8 +20,11 @@ char *str_concat(char *s1, char *s2)
 	char *str2 = s2;
 	char *p;
 
-	/* if (!str1) */
-	/* return (NULL); */
+	if (!str1)
+		str1 = "";
+
+	if (!str2)
+		str2 = "";
 
 	for (; *str1; l2++, str1++, l1++)
 		;
