@@ -26,10 +26,10 @@ char *str_concat(char *s1, char *s2)
 	if (!str2)
 		str2 = "";
 
-	for (; *str1; l2++, str1++, l1++)
+	for (; *str1; str1++, l1++)
 		;
 
-	for (; *str2; l2++, str2++, l2++)
+	for (; *str2; str2++, l2++)
 		;
 
 	p = malloc((l1 + l2) * sizeof(char));
