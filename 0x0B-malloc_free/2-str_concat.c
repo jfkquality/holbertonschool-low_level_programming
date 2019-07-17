@@ -32,6 +32,8 @@ char *str_concat(char *s1, char *s2)
 	for (; *str2; str2++, l2++)
 		;
 
+	/* printf("l1 and l2 = %d %d\n", l1, l2); */
+
 	p = malloc((l1 + l2) * sizeof(char));
 
 	if (p == NULL)
@@ -40,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < l1; i++)
 		p[i] = s1[i];
 
-	for (j = 0; i < l1 + l2; i++, j++)
+	for (j = 0; i - 1 < l1 + l2; i++, j++)
 		p[i] = s2[j];
 
 	return (p);

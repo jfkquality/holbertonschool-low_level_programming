@@ -11,7 +11,7 @@ int main(void)
 {
   char *s;
 
-  s = str_concat(0, 0);
+  s = str_concat("Betty ", "Holberton");
   if (s == NULL)
     {
       printf("failed\n");
