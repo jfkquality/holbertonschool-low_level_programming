@@ -24,6 +24,8 @@ int **alloc_grid(int width, int height)
 
 	p = malloc(width * height * sizeof(int));
 
+	printf ("size of p: %p\n", p);
+
 	if (p == NULL)
 		return (NULL);
 
