@@ -3,6 +3,11 @@
 #include <stdlib.h>
 
 
+/**
+ * malloc_checked - check malloc
+ * @b: num
+ * Return: pointer to array
+ */
 void *malloc_checked(unsigned int b)
 {
 	char *p;

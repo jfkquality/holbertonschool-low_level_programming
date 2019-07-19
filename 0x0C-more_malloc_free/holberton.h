@@ -19,5 +19,6 @@ void print_number(int n);
 int digits(int);
 void print_number2(int, int, int);
 
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int);
+char *string_nconcat(char, char, unsigned int);
 #endif /* HOLBERTON_H */
