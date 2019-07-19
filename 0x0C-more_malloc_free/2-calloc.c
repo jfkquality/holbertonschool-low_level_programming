@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _calloc - create array filled with zero
+ * _calloc - create array filled with zeros
  * @size: size of elements
  * @nmemb: # of elements in (ie, size of) array
  * Return: pointer to array
