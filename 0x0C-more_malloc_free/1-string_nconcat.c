@@ -60,9 +60,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < l1; i++)
 		p[i] = s1[i];
 
-	for (j = 0; i < newlen; i++, j++)
+	for (j = 0; j < n; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
-
+	printf("size of newlen %d. len of newlen %d\n", (int)sizeof(newlen), newlen);
+	printf("size of p: %d. len of p %d\n", (int)sizeof(p), getlen(p));
 	return (p);
 }
