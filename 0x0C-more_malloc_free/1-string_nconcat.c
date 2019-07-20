@@ -51,7 +51,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = l2;
 
 	newlen = l1 + n;
-	p = malloc((newlen) * sizeof(char));
+
+	printf("newlen is %d\n", newlen);
+
+	p = malloc((newlen) * sizeof(char) + 1);
 
 	if (p == NULL)
 		return (NULL);
@@ -62,6 +65,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; i < newlen; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
+
+	printf("new str len is %d\n", getlen(p));
+
 
 	return (p);
 }
