@@ -26,6 +26,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		p[i] = 0;
 	p[i] = '\0';
 
+	printf("malloc (i) %d\n", i);
+
 	/* while (*p != '\0') { */
 	/*   printf("%d ", *p); */
 	/*   p++; } */
