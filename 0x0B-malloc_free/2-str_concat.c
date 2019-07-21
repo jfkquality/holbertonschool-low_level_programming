@@ -31,7 +31,6 @@ char *str_concat(char *s1, char *s2)
 
 	for (; *str2; str2++, l2++)
 		;
-	l1++;
 	l2++;
 
 	/* printf("l1 and l2 = %d %d\n", l1, l2); */
