@@ -22,17 +22,15 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 
-	/* printf("l1 and l2 = %d %d\n", l1, l2); */
-
 	len = height * sizeof(int *) + (width * height * sizeof(int));
 	arr = malloc(len);
 	if (arr == NULL)
+	{
+		free (arr);
 		return (NULL);
-
+	}
 	/* ptr is now pointing to the first element of 2D array */
 	ptr = (int *)(arr + height);
-
-	/* printf ("size of p: %p\n", p); */
 
 	/* for loop to point rows pointer to appropriate location in 2D array */
 	for (i = 0; i < height; i++)
