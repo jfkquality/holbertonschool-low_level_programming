@@ -16,21 +16,22 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *p2;
 	unsigned int i;
 
-	p = (malloc(new_size));
-	if (p == NULL)
-		return (NULL);
-
-	p2 = ptr;
-
 	if (new_size == old_size)
 		return (ptr);
 
 	if (!new_size && ptr)
 		return (NULL);
 
+	p = (malloc(new_size));
+	if (p == NULL)
+		return (NULL);
+
 	if (ptr == NULL)
 		/* old_size = new_size; */
 		return (p);
+
+	p2 = ptr;
+
 
 	for (i = 0; i < old_size; i++)
 		p[i] = p2[i];

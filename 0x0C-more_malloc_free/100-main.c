@@ -44,11 +44,11 @@ int main(void)
   p = malloc(sizeof(char) * 30);
   p = _realloc(p, sizeof(char) * 30, sizeof(char) * 30);
   i = 0;
-  while (i < 98)
+  while (i < 30)
     {
       p[i++] = 98;
     }
-  simple_print_buffer(p, 98);
+  simple_print_buffer(p, 30);
   free(p);
   return (0);
 }
