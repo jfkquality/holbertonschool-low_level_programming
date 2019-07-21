@@ -42,6 +42,7 @@ char *str_concat(char *s1, char *s2)
 		str1 = "";
 
 	if (!str2)
+	  printf("if !str2\n");
 		str2 = "";
 
 
@@ -53,17 +54,17 @@ char *str_concat(char *s1, char *s2)
 	/* l1++; */
 	/* l2++; */
 
-	newlen = l1 + l2 + 1;
+	newlen = l1 + l2;
 
-	printf("l1, l2 %d, %d\n", l1, l2);
+	/* printf("l1, l2 %d %d\n", l1, l2); */
 
 	p = malloc((newlen) * sizeof(char));
 
-	printf("p malloc %d\n", *p);
+	/* printf("p malloc %d\n", *p); */
 
 	if (p == NULL)
 	{
-	  printf("malloc failed");
+	  /* printf("malloc failed"); */
 	  return (NULL);
 	}
 	for (i = 0; i < l1; i++)
@@ -72,6 +73,8 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; j < l2; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
+
+	/* printf("i at the end = %d\n", i); */
 
 	return (p);
 }
