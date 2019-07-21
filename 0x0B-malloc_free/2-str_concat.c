@@ -55,10 +55,10 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 
-	for (i = 0; i < l1; i++)
+	for (i = 0; s1[i]; i++)
 		p[i] = s1[i];
 
-	for (j = 0; j < l2; i++, j++)
+	for (j = 0; s2[j]; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
 
