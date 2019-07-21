@@ -19,13 +19,13 @@ int getlen(char *s)
 }
 
 /**
- * str_concat - concatenate 2 strings. Return pointer.
+ * string_nconcat - concatenate 2 strings. Return pointer.
  * @s1: string
  * @s2: string
- *
+ * @n: num of s2 to concat
  * Return: pointer to array
  */
-char *str_concat(char *s1, char *s2)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
 	unsigned int l1 = 0;
@@ -46,11 +46,13 @@ char *str_concat(char *s1, char *s2)
 
 	l1 = getlen(str1);
 	l2 = getlen(str2);
-	l2++;
 
-	newlen = l1 + l2;
+	if (n >= l2)
+		n = l2;
 
-	p = malloc((newlen) * sizeof(char));
+	newlen = l1 + n;
+
+	p = malloc((newlen) * sizeof(char) + 1);
 
 	if (p == NULL)
 		return (NULL);
@@ -58,7 +60,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < l1; i++)
 		p[i] = s1[i];
 
-	for (j = 0; j < l2; i++, j++)
+	for (j = 0; j < n; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
 
