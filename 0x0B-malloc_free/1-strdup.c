@@ -29,7 +29,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	for (i = 0; i < l; i++)
-	  printf ("i, l, str[i] = %d, %d, %d\n", i, l, str[i]);
+	  /* printf ("i, l, str[i] = %d, %d, %d\n", i, l, str[i]); */
 		p[i] = str[i];
 
 	return (p);
