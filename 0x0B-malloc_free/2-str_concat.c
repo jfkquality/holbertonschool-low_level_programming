@@ -46,11 +46,13 @@ char *str_concat(char *s1, char *s2)
 
 	l1 = getlen(str1);
 	l2 = getlen(str2);
-	l2++;
 
-	newlen = l1 + l2;
+	/* l1++; */
+	/* l2++; */
 
-	p = malloc((newlen) * sizeof(char));
+	newlen = l1 + l2 + 1;
+
+	p = malloc((newlen) * sizeof(char) + 1);
 
 	if (p == NULL)
 		return (NULL);
