@@ -38,11 +38,11 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 
 	if (!str1)
-	  printf("if !str1\n");
+	  /* printf("if !str1\n"); */
 		str1 = "";
 
 	if (!str2)
-	  printf("if !str2\n");
+	  /* printf("if !str2\n"); */
 		str2 = "";
 
 
@@ -58,7 +58,7 @@ char *str_concat(char *s1, char *s2)
 
 	/* printf("l1, l2 %d %d\n", l1, l2); */
 
-	p = malloc((newlen) * sizeof(char));
+	p = malloc((newlen) * sizeof(char) + 1);
 
 	/* printf("p malloc %d\n", *p); */
 
