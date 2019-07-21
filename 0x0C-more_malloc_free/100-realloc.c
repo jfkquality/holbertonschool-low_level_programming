@@ -20,6 +20,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (p == NULL)
 		return (NULL);
 
+	p2 = ptr;
+
 	if (new_size == old_size)
 		return (ptr);
 
@@ -29,8 +31,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 		/* old_size = new_size; */
 		return (p);
-
-	p2 = ptr;
 
 	for (i = 0; i < old_size; i++)
 		p[i] = p2[i];
