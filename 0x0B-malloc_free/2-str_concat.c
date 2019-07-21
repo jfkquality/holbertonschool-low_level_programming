@@ -38,6 +38,7 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 
 	if (!str1)
+	  printf("if !str1\n");
 		str1 = "";
 
 	if (!str2)
@@ -47,20 +48,28 @@ char *str_concat(char *s1, char *s2)
 	l1 = getlen(str1);
 	l2 = getlen(str2);
 
+	/* printf("l1, l2 %d, %d\n", l1, l2); */
+
 	/* l1++; */
 	/* l2++; */
 
 	newlen = l1 + l2;
 
-	p = malloc((newlen) * sizeof(char) + 1);
+	printf("l1, l2 %d, %d\n", l1, l2);
+
+	p = malloc((newlen) * sizeof(char));
+
+	printf("p malloc %d\n", *p);
 
 	if (p == NULL)
-		return (NULL);
-
-	for (i = 0; s1[i]; i++)
+	{
+	  printf("malloc failed");
+	  return (NULL);
+	}
+	for (i = 0; i < l1; i++)
 		p[i] = s1[i];
 
-	for (j = 0; s2[j]; i++, j++)
+	for (j = 0; j < l2; i++, j++)
 		p[i] = s2[j];
 	p[i] = '\0';
 

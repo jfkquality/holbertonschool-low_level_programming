@@ -13,7 +13,7 @@ int main(void)
 
   /* str_concat("Hello", NULL); str_concat(NULL, "Hello"); str_concat(NULL, NULL); */
 
-  s = str_concat("Hello", NULL);
+  s = str_concat(NULL, NULL);
   if (s == NULL)
     {
       printf("failed\n");
