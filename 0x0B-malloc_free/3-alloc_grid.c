@@ -26,7 +26,7 @@ int **alloc_grid(int width, int height)
 	arr = malloc(len);
 	if (arr == NULL)
 	{
-		free (arr);
+		free(arr);
 		return (NULL);
 	}
 	/* ptr is now pointing to the first element of 2D array */
