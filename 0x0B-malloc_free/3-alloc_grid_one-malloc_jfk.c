@@ -14,35 +14,33 @@ int **alloc_grid(int width, int height)
 
 	int i = 0;
 	int j = 0;
-	/* int len = 0; */
-	/* int *ptr; */
+	int len = 0;
+	int *ptr;
 	int **arr;
 
 	if (!width || !height)
 		return (NULL);
 
-	/* Below if using one malloc, a pointer, and a double ptr */
-	/* len = height * sizeof(int *) + (width * height * sizeof(int)); */
 
-	arr = malloc(height * sizeof(int *)); /* rows */
+	len = height * sizeof(int *) + (width * height * sizeof(int));
+	arr = malloc(len);
 	if (arr == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
+	/* ptr is now pointing to the first element of 2D array */
+	ptr = (int *)(arr + height);
+
+	/* for loop to point rows pointer to appropriate location in 2D array */
+	for (i = 0; i < height; i++)
+		arr[i] = (ptr + width * i);
 
 	for (i = 0; i < height; i++)
 	{
-		arr[i] = malloc(width * sizeof(int *));
-		if (arr[i] == NULL)
-		{
-			free (arr[i]);
-			return (NULL);
-		}
 		for (j = 0; j < width; j++)
-		{
 			arr[i][j] = 0; /* OR *(*(arr+i)+j) = 0 */
-		}
 	}
 	return (arr);
+
 }
