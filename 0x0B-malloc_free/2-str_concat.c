@@ -53,7 +53,7 @@ char *str_concat(char *s1, char *s2)
 	/* l1++; */
 	/* l2++; */
 
-	newlen = l1 + l2;
+	newlen = l1 + l2 + 1;
 
 	printf("l1, l2 %d, %d\n", l1, l2);
 
