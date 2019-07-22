@@ -5,7 +5,7 @@
  *
  * Return: Always 0.
  */
-int main(__attribute__ ((unused)) int argc, __attribute__ ((unused)) char *argv[])
+int main(void)
 {
 	printf("%s\n", __FILE__);
 
