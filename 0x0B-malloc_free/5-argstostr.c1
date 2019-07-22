@@ -1,0 +1,64 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * getlen - get length of string.
+ * @s: string pointer
+ * Return: length
+ */
+int getlen(char *s)
+{
+  int l = 0;
+  char *s11 = s;
+
+  for (; *s11; s11++, l++)
+    ;
+
+  return (l);
+}
+/**
+ * argstostr - Concat all program arg
+ * @ac: num of args
+ * @av: array of args
+ * Return: pointer to array
+ */
+/* int **alloc_grid(int width, int height) */
+char *argstostr(int ac, char **av)
+{
+
+	int i = 0;
+	/* int j = 0; */
+	/* int len = 0; */
+	/* int *ptr; */
+	char *str;
+
+	if (!ac || !av)
+		return (NULL);
+
+	/* Below if using one malloc, a pointer, and a double ptr */
+	/* len = height * sizeof(int *) + (width * height * sizeof(int)); */
+
+	/* arr = malloc(ac * sizeof(char)); /\* rows *\/ */
+	/* if (arr == NULL) */
+	/* { */
+	/* 	free(arr); */
+	/* 	return (NULL); */
+	/* } */
+
+	/* for (i = 0; i < ac; i++) */
+	/* { */
+	/*   arr[i] = malloc(getlen(av[i]) * sizeof(char) + 1); */
+	/* } */
+
+	str = av[2];
+	printf("str = av[i] %d\n", *str);
+
+	for (i = 0; i < ac; i++)
+	{
+	  printf("%s\n", av[i]);
+	}
+	/* printf("%d\n", *str); */
+	return (0); /* str); */
+}
