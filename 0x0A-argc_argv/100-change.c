@@ -46,7 +46,7 @@ int main(int argc, __attribute__ ((unused)) char *argv[])
 	int coin = 0;
 	char *coins[] = {"25", "10", "5", "2", "1"};
 
-	if (argc - 1 != 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
