@@ -6,7 +6,6 @@
 /**
  * get_op_func - pointer to operations functions
  * @s: operator
- * @int: integer
  * ...
  * Return: int.
  */
