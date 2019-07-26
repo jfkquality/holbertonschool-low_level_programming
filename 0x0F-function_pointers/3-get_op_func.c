@@ -4,7 +4,7 @@
 
 
 /**
- * get_op_func.c - pointer to operations functions
+ * get_op_func - pointer to operations functions
  * @s: operator
  * @int: integer
  * @int: integer

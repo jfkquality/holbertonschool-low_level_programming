@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (!strchr(oper, *argv[2]))
+	if (!strchr(oper, *argv[2]) || strlen(argv[2]) > 1)
 	{
 		printf("Error\n");
 		exit(99);
