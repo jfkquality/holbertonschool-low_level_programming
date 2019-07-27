@@ -63,13 +63,13 @@ void print_all(const char * const format, ...)
 			good = 1;
 			break;
 		case 's':
-			word =  va_arg(list, char *);
-			if (word == '\0')
-			{
-				printf("%p", word);
-				good = 1;
-				break;
-			}
+			/* word =  va_arg(list, char *); */
+			/* if (word == '\0') */
+			/* { */
+			/* 	printf("%p", word); */
+			/* 	good = 1; */
+			/* 	break; */
+			/* } */
 			printf("%p", va_arg(list, char *));
 			good = 1;
 			break;
