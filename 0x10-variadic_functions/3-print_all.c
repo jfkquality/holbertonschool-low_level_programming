@@ -78,7 +78,7 @@ void print_all(const char * const format, ...)
 	char *word;
 
 	va_start(list, format);
-	while (i < _strlen(format))
+	while (format && i < _strlen(format))
 	{
 		separator(i, good);
 		switch (format[i])
