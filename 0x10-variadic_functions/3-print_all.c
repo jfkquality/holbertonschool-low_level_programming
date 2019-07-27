@@ -29,6 +29,23 @@ int _strlen(const char * const s)
 }
 
 /**
+ * separator - see if separator is needed
+ *
+ * @count: count of fomrat length
+ * @okflag: good char flag
+ *
+ * Return: c.
+ */
+
+void separator(int count, int okflag)
+{
+	if (count > 0 && okflag)
+		printf(", ");
+}
+
+
+
+/**
  * print_all - print all parameters.
  * @char *: string?
  * @format: print format specifier (to find # params)
@@ -40,14 +57,13 @@ void print_all(const char * const format, ...)
 	va_list list;
 	int i = 0;
 	_Bool good;
-	char *word;
+	/* char *word; */
 
 	good = 1;
 	va_start(list, format);
 	while (i < _strlen(format))
 	{
-		if (i > 0 && good)
-			printf(", ");
+		separator(i, good);
 		switch (format[i])
 		{
 		case 'c':
