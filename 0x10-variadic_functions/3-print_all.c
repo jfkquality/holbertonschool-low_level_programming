@@ -42,8 +42,6 @@ void print_all(const char * const format, ...)
 	_Bool good;
 	char *word;
 
-	if (!format)
-	  exit(EXIT_FAILURE);
 	good = 1;
 	va_start(list, format);
 	while (i < _strlen(format))
