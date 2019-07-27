@@ -13,18 +13,18 @@
  */
 int _strlen(const char * const s)
 {
-  int c = 0;
-  const char *s2;
+	int c = 0;
+	const char *s2;
 
-  s2 = s;
+	s2 = s;
 
-  while (*s2 != '\0')
-    {
-      s2++;
-      c++;
-    }
+	while (*s2 != '\0')
+	{
+		s2++;
+		c++;
+	}
 
-  return (c);
+	return (c);
 }
 
 /**
