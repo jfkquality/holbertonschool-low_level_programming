@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	while (i < strlen(format))
 	{
 		if (i > 0 && good)
-			    printf(", ");
+			printf(", ");
 		switch (format[i])
 		{
 		case 'c':
