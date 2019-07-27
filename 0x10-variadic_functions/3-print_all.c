@@ -3,6 +3,30 @@
 #include <string.h>
 #include "variadic_functions.h"
 
+
+/**
+ * _strlen - Get the length of a string
+ *
+ * @s: string parament
+ *
+ * Return: c.
+ */
+int _strlen(const char * const s)
+{
+  int c = 0;
+  const char *s2;
+
+  s2 = s;
+
+  while (*s2 != '\0')
+    {
+      s2++;
+      c++;
+    }
+
+  return (c);
+}
+
 /**
  * print_all - print all parameters.
  * @char *: string?
@@ -13,12 +37,12 @@
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	unsigned int i = 0;
+	int i = 0;
 	_Bool good;
 
 	good = 1;
 	va_start(list, format);
-	while (i < strlen(format))
+	while (i < _strlen(format))
 	{
 		if (i > 0 && good)
 			printf(", ");
