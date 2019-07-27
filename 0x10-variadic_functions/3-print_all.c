@@ -66,6 +66,7 @@ void print_all(const char * const format, ...)
 			break;
 		default:
 			good = 0;
+			break;
 		}
 		i++;
 	}
