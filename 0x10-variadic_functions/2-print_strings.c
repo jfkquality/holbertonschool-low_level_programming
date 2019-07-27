@@ -22,10 +22,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		word = va_arg(list, char *);
 		if (separator)
 		{
-		  if (!word)
-			printf("%p%s", word, separator);
-		  else
-			printf("%s%s", word, separator);
+			if (!word)
+				printf("%p%s", word, separator);
+			else
+				printf("%s%s", word, separator);
 		}
 	}
 	word = va_arg(list, char *);
