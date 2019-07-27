@@ -55,11 +55,9 @@ void separator(int count, int okflag)
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	int i = 0;
-	_Bool good;
+	int i = 0; _Bool good = 1;
 	/* char *word; */
 
-	good = 1;
 	va_start(list, format);
 	while (i < _strlen(format))
 	{
