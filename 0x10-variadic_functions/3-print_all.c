@@ -44,6 +44,24 @@ void separator(int count, int okflag)
 }
 
 
+/**
+ * null_str_chk - see if string is null
+ *
+ * @word: string
+ *
+ * Return: c.
+ */
+void null_str_chk(char *word)
+{
+	switch (word == '\0')
+	{
+	case (1):
+		printf("%p", word);
+		break;
+	case (0):
+		printf("%s", word);
+	}
+}
 
 /**
  * print_all - print all parameters.
@@ -55,8 +73,9 @@ void separator(int count, int okflag)
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	int i = 0; _Bool good = 1;
-	/* char *word; */
+	int i = 0;
+	_Bool good = 1;
+	char *word;
 
 	va_start(list, format);
 	while (i < _strlen(format))
@@ -77,15 +96,8 @@ void print_all(const char * const format, ...)
 			good = 1;
 			break;
 		case 's':
-			/* word =  va_arg(list, char *); */
-			/* if (word == '\0') */
-			/* { */
-			/* printf("%p", word); */
-			/* good = 1; */
-			/* break; */
-			/* } */
-			printf("%s", va_arg(list, char *));
-			good = 1;
+			word =  va_arg(list, char *);
+			null_str_chk(word);
 			break;
 		default:
 			good = 0;
