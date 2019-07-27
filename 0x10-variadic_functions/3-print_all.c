@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
 
 
@@ -39,7 +40,10 @@ void print_all(const char * const format, ...)
 	va_list list;
 	int i = 0;
 	_Bool good;
+	char *word;
 
+	if (!format)
+	  exit(EXIT_FAILURE);
 	good = 1;
 	va_start(list, format);
 	while (i < _strlen(format))
@@ -61,12 +65,18 @@ void print_all(const char * const format, ...)
 			good = 1;
 			break;
 		case 's':
-			printf("%s", va_arg(list, char *));
+			word =  va_arg(list, char *);
+			if (word == '\0')
+			{
+				printf("%p", word);
+				good = 1;
+				break;
+			}
+			printf("%p", va_arg(list, char *));
 			good = 1;
 			break;
 		default:
 			good = 0;
-			break;
 		}
 		i++;
 	}
