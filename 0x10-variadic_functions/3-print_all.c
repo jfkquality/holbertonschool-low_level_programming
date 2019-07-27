@@ -14,6 +14,10 @@ void print_all(const char * const format, ...)
 {
 	va_list list;
 	unsigned int i = 0;
+	_Bool good;
+
+	good = 1;
+
 	/* char separator[] = ", "; */
 
 	va_start(list, format);
@@ -22,34 +26,32 @@ void print_all(const char * const format, ...)
 
 	while (i < strlen(format))
 	{
-		if (i != 0)
-			printf(", ");
+		if (i > 0 && good)
+			    printf(", ");
 		switch (format[i])
 		{
 		case 'c':
-		  printf("%c", va_arg(list, int));
+			printf("%c", va_arg(list, int));
+			good = 1;
 			break;
 		case 'i':
-		  printf("%d", va_arg(list, int));
+			printf("%d", va_arg(list, int));
+			good = 1;
 			break;
 		case 'f':
-		  printf("%f", va_arg(list, double));
+			printf("%f", va_arg(list, double));
+			good = 1;
 			break;
 		case 's':
-		  printf("%s", va_arg(list, char *));
+			printf("%s", va_arg(list, char *));
+			good = 1;
 			break;
 		default:
-			;
+			good = 0;
 		}
 		i++;
 	}
 	printf("\n");
-
-	/* word = va_arg(list, char *); */
-	/* if (!word) */
-	/* 	printf("%p\n", word); */
-	/* else */
-	/* 	printf("%s\n", word); */
 
 	va_end(list);
 }
