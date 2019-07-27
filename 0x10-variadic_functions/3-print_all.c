@@ -17,13 +17,7 @@ void print_all(const char * const format, ...)
 	_Bool good;
 
 	good = 1;
-
-	/* char separator[] = ", "; */
-
 	va_start(list, format);
-
-	/* printf("FORMAT LENGTH: %d. FORMAT[0]\s\n", (int)strlen(format), format[0]); */
-
 	while (i < strlen(format))
 	{
 		if (i > 0 && good)
@@ -52,6 +46,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-
 	va_end(list);
 }
