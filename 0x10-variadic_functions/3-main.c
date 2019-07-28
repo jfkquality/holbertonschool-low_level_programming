@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-/* "kafceisfj" */
-	print_all('\0', 'H', 0, '\0');
+  print_all("ssss", "x", 0, "", "q");
 	return (0);
 }

@@ -40,7 +40,8 @@ int _strlen(const char * const s)
 
 void separator(int count, int length, int okflag)
 {
-	if (count < length - 1 && okflag)
+  length = length;
+  if (count != 0 && count < length - 1 && okflag)
 		printf(", ");
 }
 
