@@ -32,6 +32,7 @@ int _strlen(const char * const s)
  * separator - see if separator is needed
  *
  * @count: count of fomrat length
+ * @length: length of format string
  * @okflag: good char flag
  *
  * Return: c.
@@ -76,13 +77,13 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	_Bool good = 0;
 	char *word;
-	int len;
+	/* int len; */
 
 	va_start(list, format);
-	len = _strlen(format);
-	while (format && i < len)
+	/* len = _strlen(format); */
+	while (format && i < _strlen(format))
 	{
-		separator(i, len, good);
+		separator(i, _strlen(format), good);
 		switch (format[i])
 		{
 		case 'c':
