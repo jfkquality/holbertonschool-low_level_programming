@@ -37,9 +37,9 @@ int _strlen(const char * const s)
  * Return: c.
  */
 
-void separator(int count, int okflag)
+void separator(int count, int length, int okflag)
 {
-	if (count > 0 && okflag)
+	if (count < length - 1 && okflag)
 		printf(", ");
 }
 
@@ -74,26 +74,28 @@ void print_all(const char * const format, ...)
 {
 	va_list list;
 	int i = 0;
-	_Bool good = 1;
+	_Bool good = 0;
 	char *word;
+	int len;
 
 	va_start(list, format);
-	while (format && i < _strlen(format))
+	len = _strlen(format);
+	while (format && i < len)
 	{
-		separator(i, good);
+		separator(i, len, good);
 		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(list, int));
-			good = 1;
+			/* good = 1; */
 			break;
 		case 'i':
 			printf("%d", va_arg(list, int));
-			good = 1;
+			/* good = 1; */
 			break;
 		case 'f':
 			printf("%f", va_arg(list, double));
-			good = 1;
+			/* good = 1; */
 			break;
 		case 's':
 			word =  va_arg(list, char *);
@@ -101,8 +103,11 @@ void print_all(const char * const format, ...)
 			break;
 		default:
 			good = 0;
+			i++;
+			continue;
 		}
 		i++;
+		good = 1;
 	}
 	printf("\n");
 	va_end(list);
