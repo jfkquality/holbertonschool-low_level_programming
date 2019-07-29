@@ -41,7 +41,7 @@ int _strlen(const char * const s)
 void separator(int count, int length, int okflag)
 {
 	length = length;
-	if (count < length - 1 && okflag)
+	if (count < length && okflag)
 		printf(", ");
 }
 
@@ -85,6 +85,7 @@ void print_all(const char * const format, ...)
 	while (format && i < _strlen(format))
 	{
 		separator(i, _strlen(format), good);
+		good = 1;
 		switch (format[i])
 		{
 		case 'c':
