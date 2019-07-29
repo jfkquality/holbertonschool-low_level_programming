@@ -41,7 +41,7 @@ int _strlen(const char * const s)
 void separator(int count, int length, int okflag)
 {
 	length = length;
-	if (count != 0 && count < length - 1 && okflag)
+	if (count < length - 1 && okflag)
 		printf(", ");
 }
 
@@ -60,7 +60,7 @@ void null_str_chk(char *word)
 	case (1):
 		printf("%p", word);
 		break;
-	case (0):
+	default:
 		printf("%s", word);
 	}
 }

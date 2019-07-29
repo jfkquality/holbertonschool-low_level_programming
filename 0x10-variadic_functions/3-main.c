@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-  print_all("ssss", "x", 0, "", "q");
+	print_all("ssssjf", "x", 0, "", "q");
 	return (0);
 }
