@@ -17,6 +17,9 @@ size_t print_list(const list_t *h)
 	current = h;
 	next = current->next;
 
+	if (!h)
+		return (-1);
+
 	while (current->next)
 	{
 		if (current->str)
