@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "lists.h"
+
+/** 
+ * function - describe function
+ * @param:
+ * @param:
+ * 
+ * Return: 
+ */
+
+size_t print_list(const list_t *h)
+{
+}
