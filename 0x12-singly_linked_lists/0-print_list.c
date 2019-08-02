@@ -19,10 +19,10 @@ size_t print_list(const list_t *h)
 	while (current)
 	{
 		i++;
-                if (current->str)
-		  (printf("[%u] %s\n", current->len, current->str));
-                else
-		  (printf("[%d] %p\n", 0, current->str));
+		if (current->str)
+			(printf("[%u] %s\n", current->len, current->str));
+		else
+			(printf("[%d] %p\n", 0, current->str));
 
 		current = current->next;
 	}
