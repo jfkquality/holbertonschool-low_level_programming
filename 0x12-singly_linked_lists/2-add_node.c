@@ -5,6 +5,28 @@
 #include "lists.h"
 
 /**
+ * _strlen - Get the length of a string
+ *
+ * @s: string parament
+ *
+ * Return: c.
+ */
+int _strlen(const char *s)
+{
+	int c = 0;
+	const char *s2;
+
+	s2 = s;
+
+	while (*s2 != '\0')
+	{
+		s2++;
+		c++;
+	}
+
+	return (c);
+}
+/**
  * add_node - add nodes to beginning of list
  * @head: double point. ???
  * @str: new string
@@ -24,7 +46,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new->str = strdup(str);
-	new->len = strlen(str);
+	new->len = _strlen(str);
 	new->next = *head;
 	*head = new;
 
