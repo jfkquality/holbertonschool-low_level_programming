@@ -11,10 +11,10 @@
 	    global main
 
 main:
-	    mov  edx, msglen
-	    mov  esi, msg1
-	    mov  edi, fmt
-	    mov  eax, 0     	; no f.p. args
+	    mov  rdx, msglen
+	    mov  rsi, msg1
+	    mov  rdi, fmt
+	    mov  rax, 0     	; no f.p. args
 	    call printf
 
 	    ;; mov  edx, msg2
@@ -23,8 +23,8 @@ main:
 	    ;; mov  eax, 0     	; no f.p. args
 	    ;; call printf
 
-	    mov  ebx, 0     	; return value
-	    mov  eax, 1
+	    mov  rbx, 0     	; return value
+	    mov  rax, 1
 	    ;; int  0x80
 ;; global main
 
