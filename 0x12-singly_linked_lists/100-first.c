@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void myfirst(void) __attribute__ ((constructor));
+void myfirst(void)  __attribute__ ((constructor));
 
 void myfirst(void)
 {
