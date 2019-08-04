@@ -1,7 +1,7 @@
     section .data
 	;; fmt     db "%u  %s",10,0
 	;; msg1    db "Hello, Holberton",0
-	fmt     db "%s ",10,0
+	fmt     db "%s",10,0
 	msg1    db "Hello, Holberton",0
 	msglen:	  equ $ - msg1
 	;; msg2    db "Goodbye",0
