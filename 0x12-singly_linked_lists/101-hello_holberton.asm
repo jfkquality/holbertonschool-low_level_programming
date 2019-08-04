@@ -1,8 +1,9 @@
     section .data
 	;; fmt     db "%u  %s",10,0
 	;; msg1    db "Hello, Holberton",0
-	fmt     db "",1
-	msg1    db "Hello, Holberton",10
+	fmt     db "%s ",10,0
+	msg1    db "Hello, Holberton",0
+	msglen:	  equ $ - msg1
 	;; msg2    db "Goodbye",0
 
 	    section .text
@@ -10,8 +11,8 @@
 	    global main
 
 main:
-	    mov  edx, msg1
-	    ;; mov  esi, 1
+	    mov  edx, msglen
+	    mov  esi, msg1
 	    mov  edi, fmt
 	    mov  eax, 0     	; no f.p. args
 	    call printf
@@ -25,3 +26,22 @@ main:
 	    mov  ebx, 0     	; return value
 	    mov  eax, 1
 	    ;; int  0x80
+;; global main
+
+;; 	        section .text
+
+;; main:
+;; 	          mov rax, 1	; write(
+;; 	          mov rdi, 1	;   STDOUT_FILENO,
+;; 	          mov rsi, msg	;   "Hello, world!\n",
+;; 	          mov rdx, msglen ;   sizeof("Hello, world!\n")
+;; 	          syscall	  ; );
+
+;; 	          mov rax, 60	; exit(
+;; 	          mov rdi, 0	;   EXIT_SUCCESS
+;; 	          syscall	; );
+
+;; 	        section .rodata
+;; msg:	     db "Hello, Holberton", 10
+;; msglen:	  equ $ - msg
+	
