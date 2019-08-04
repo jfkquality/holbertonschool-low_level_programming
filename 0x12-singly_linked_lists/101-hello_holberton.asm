@@ -24,4 +24,4 @@ main:
 
 	    mov  ebx, 0     	; return value
 	    mov  eax, 1
-	    int  0x80
+	    ;; int  0x80
