@@ -1,9 +1,9 @@
     section .data
 	;; fmt     db "%u  %s",10,0
 	;; msg1    db "Hello, Holberton",0
-	fmt     db "%s",10,0
-	msg1    db "Hello, Holberton",0
-	msglen:	  equ $ - msg1
+	;; fmt     db "%s",10,0
+	msg1    db "Hello, Holberton",10
+	;; msglen:	  equ $ - msg1
 	;; msg2    db "Goodbye",0
 
 	    section .text
@@ -11,9 +11,9 @@
 	    global main
 
 main:
-	    mov  rdx, msglen
-	    mov  rsi, msg1
-	    mov  rdi, fmt
+	    ;; mov  rdx, msglen
+	    ;; mov  rsi, msg1
+	    mov  rdi, msg1
 	    mov  rax, 0     	; no f.p. args
 	    call printf
 
