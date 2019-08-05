@@ -25,7 +25,6 @@ main:
 
 	    mov  rbx, 0     	; return value
 	    mov  rax, 1
-	    ;; int  0x80
 ;; global main
 
 ;; 	        section .text
