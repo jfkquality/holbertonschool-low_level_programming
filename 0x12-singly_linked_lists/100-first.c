@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "lists.h"
 
+void myfirst(void) __attribute__((constructor));
+
 /**
  * myfirst - print line before main()
  *
  * Return: nothing
  */
-
-void myfirst(void)  __attribute__ ((constructor));
 
 void myfirst(void)
 {
