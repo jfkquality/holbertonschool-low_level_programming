@@ -11,16 +11,31 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	listint_t current;
+	const listint_t *current;
 	int i = 0;
 
-	current = *h;
-	while (current.n)
+	current = h;
+	while (current)
 	{
 		i++;
-		if (current.next == NULL)
-			break;
-		current = *current.next;
+		current = current->next;
 	}
 	return (i);
 }
+
+
+/* Before copying 0x12 #1 */
+/* { */
+/* listint_t current; */
+/* int i = 0; */
+
+/* current = *h; */
+/* while (current.n) */
+/* { */
+/* i++; */
+/* if (current.next == NULL) */
+/* break; */
+/* current = *current.next; */
+/* } */
+/* return (i); */
+/* } */
