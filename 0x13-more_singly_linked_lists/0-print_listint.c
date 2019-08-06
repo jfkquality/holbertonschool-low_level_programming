@@ -11,7 +11,7 @@
  */
 size_t print_listint(const listint_t *h)
 /* { */
-/*vlistint_t current; */
+/* listint_t current; */
 /* int i = 0; */
 
 /* current = *h; */
