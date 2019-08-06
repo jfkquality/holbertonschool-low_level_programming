@@ -23,7 +23,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	}
 
 	new->n = n;
-	/* printf("new->n after 1st assigned. %d\n", new->n); */
 	new->next = *head;
 	*head = new;
 
