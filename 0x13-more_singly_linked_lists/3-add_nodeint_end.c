@@ -25,7 +25,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 
 	new->n = n;
-	/* printf("new->n after 1st assigned. %d\n", new->n); */
 	new->next = NULL;
 
 	if (*head) /* Then find the last node */
