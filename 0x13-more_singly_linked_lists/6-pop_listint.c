@@ -5,7 +5,7 @@
 #include "lists.h"
 
 /**
- * pop_listint - free a list
+ * pop_listint - delete the head node
  * @head: double point. ???
  *
  * Return: pointer to new list
