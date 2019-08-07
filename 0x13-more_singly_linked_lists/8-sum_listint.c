@@ -5,8 +5,8 @@
 #include "lists.h"
 
 /**
- *  sum_listint_at_index - sum a list's values
- * @head: double point. ???
+ *  sum_listint - sum a list's values
+ * @head: double point.
  *
  * Return: pointer to new list
  */
