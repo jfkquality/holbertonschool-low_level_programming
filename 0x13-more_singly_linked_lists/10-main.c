@@ -3,6 +3,13 @@
 #include <stdio.h>
 #include "lists.h"
 
+/**
+ * printing - printing
+ * @head1: list
+ *
+ * Return: Always 0.
+ */
+
 void printing(listint_t *head1)
 {
 	print_listint(head1);

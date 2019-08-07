@@ -7,7 +7,7 @@
 /**
  * delete_nodeint_at_index - delete a node at index
  * @head: double point. ???
- * *index: index
+ * @index: index
  *
  * Return: pointer to new list
  */
