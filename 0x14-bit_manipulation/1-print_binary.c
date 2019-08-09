@@ -5,7 +5,7 @@
  * print_binary - print binary from decimal without / or %
  * @n: decimal number to convert
  *
- *Return: nothing
+ * Return: nothing
  */
 void print_binary(unsigned long int n)
 {

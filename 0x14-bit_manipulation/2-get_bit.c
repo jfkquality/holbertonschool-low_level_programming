@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include "holberton.h"
 
+/**
+ * get_bit - get bit at index
+ * @n: decimal number to convert
+ * @index: index
+ *
+ * Return: nothing
+ */
+
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int lsb;
