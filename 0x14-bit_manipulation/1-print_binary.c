@@ -2,41 +2,24 @@
 #include <stdio.h>
 
 /**
- * _strlen - Get the length of a string
+ * print_binary - print binary from decimal without / or %
+ * @n: decimal number to convert
  *
- * @s: string parament
- *
- * Return: c.
+ *Return: nothing
  */
-int _strlen(const char *s)
-{
-	int c = 0;
-	const char *s2;
-
-	s2 = s;
-
-	while (*s2 != '\0')
-	{
-		s2++;
-		c++;
-	}
-
-	return (c);
-}
-
-/**
- * print_binary - print decimal to binary
- * @n: decimal number
- *
- * Return: counter 1
- */
-
 void print_binary(unsigned long int n)
 {
 
-	if (n)
+	unsigned long int mask = 4294967296;
+	/* int found_one = 0; */
+
+	while (mask > 0)
 	{
-		print_binary(n / 2);
-		_putchar((n % 2) + '0');
+		if ((n & mask) == 0) /* && found_one) */
+			_putchar('0');
+		else
+			_putchar('1');
+		/* found_one = 1; */
+		mask = mask >> 1;
 	}
 }
