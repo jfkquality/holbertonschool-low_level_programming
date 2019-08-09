@@ -4,6 +4,7 @@
 /**
  * _isdigit - determines if a character is upper or lower case
  * @c: The character to check
+ *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -17,7 +18,6 @@ int _isdigit(int c)
 
 /**
  * _strlen - Get the length of a string
- *
  * @s: string parament
  *
  * Return: c.
@@ -40,7 +40,7 @@ int _strlen(const char *s)
 
 /**
  * binary_to_uint - convert binary to unsigned int
- * b: binary number as a string
+ * @b: binary number as a string
  *
  * Return: unsigned int
  */
