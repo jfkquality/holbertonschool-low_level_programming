@@ -38,7 +38,8 @@ int main(int argc, char *argv[])
 	while (count != 0)
 	{
 		count = read(fd1, buf, bufsize);
-		buf[count] = '\0';
+		if (count < bufsize)
+			buf[count] = '\0'; /* Why aren't changes showing it git ad? */
 		wrote = write(fd2, buf, count);
 		if (wrote == -1)
 			dprintf(STDERR_FILENO, "Can't write %s\n", file2), exit(99);
