@@ -6,7 +6,13 @@
 #include <unistd.h>
 #include "holberton.h"
 
-
+/**
+ * read_textfile - read text file, write to stdout
+ * @filename: file name
+ * @letters: num of chars to read/write
+ *
+ * Return: num of chars read/write
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
