@@ -9,31 +9,31 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	int fd;
+	int count;
+	int wrote;
+	char *buf;
 
-  int fd;
-  int count;
-  int wrote;
-  char *buf;
+	if (!filename)
+		return (0);
 
-  if (!filename)
-    return (0);
+	buf = malloc(letters * sizeof(size_t));
 
-  buf = malloc(letters * sizeof(size_t));
+	/* open */
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
 
-  /* read */
-  fd = open(filename, O_RDONLY);
-  if (fd == -1)
-    {
-      printf("Failed to open and read the file.\n");
-      exit (1);
-    }
+	/* read */
+	count = read(fd, buf, letters);
+	buf[count] = '\0';
 
-  count = read(fd, buf, letters);
-  buf[count + 1] = '\0';
+	/* write */
+	wrote = write(1, buf, count);
+	if (wrote < 0 || wrote != count)
+		return (0);
 
-  wrote = write(1, buf, count);
+	close(fd);
 
-  close(fd);
-
-  return (wrote);
+	return (wrote);
 }
