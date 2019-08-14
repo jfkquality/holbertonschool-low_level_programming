@@ -15,11 +15,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, count, wrote, bufsize = 1024;
+	int fd1, fd2;
 	char *buf[1024], *file1, *file2;
+	int count, wrote, bufsize = 1024;
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to.\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
 	file1 = argv[1];
 	file2 = argv[2];
