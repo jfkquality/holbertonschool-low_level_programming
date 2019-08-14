@@ -31,18 +31,18 @@ int main(int argc, char *argv[])
 	fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0662);
 	/* while ((fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0662) == -1) */
 	if (fd2 == -1)
-		dprintf(STDERR_FILENO, "Can't write %s\n", file2), exit(99);
+		dprintf(STDERR_FILENO, "Can't write to %s\n", file2), exit(99);
 
 	count = bufsize;
 
 	while (count != 0)
 	{
 		count = read(fd1, buf, bufsize);
-		if (count < bufsize)
-			buf[count] = '\0'; /* Why aren't changes showing it git ad? */
+		/* if (count < bufsize) */
+		/* 	buf[count] = '\0'; /\* Why aren't changes showing it git ad? *\/ */
 		wrote = write(fd2, buf, count);
 		if (wrote == -1)
-			dprintf(STDERR_FILENO, "Can't write %s\n", file2), exit(99);
+			dprintf(STDERR_FILENO, "Can't write to %s\n", file2), exit(99);
 	}
 	if (close(fd1) == -1)
 		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd1), exit(100);
