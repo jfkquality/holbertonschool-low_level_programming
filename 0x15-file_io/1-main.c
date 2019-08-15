@@ -4,6 +4,8 @@
 
 /**
  * main - check the code for Holberton School students.
+ * @ac: count of args
+ * @av: list of args
  *
  * Return: Always 0.
  */
