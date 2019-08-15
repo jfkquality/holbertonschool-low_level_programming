@@ -11,7 +11,7 @@
  * @text_content: text content
  * @filename: file name
  *
- * Return: 1 o -1
+ * Return: 1 or -1
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -35,6 +35,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		count++;
 	}
+	text_content[count] = '\0';
 	/* write */
 	wrote = write(fd, text_content, count);
 	if (wrote < 0)
