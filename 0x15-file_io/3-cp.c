@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	fd2 = open(file2, O_CREAT | O_EXCL | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 < 0)
-	  fd2 = open(file2, O_WRONLY | O_TRUNC);
+		fd2 = open(file2, O_WRONLY | O_TRUNC);
 	/* while ((fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0662) == -1) */
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Can't write to %s\n", file2), exit(99);
