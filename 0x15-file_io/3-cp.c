@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 	count = bufsize; /* Don't set this?... */
 
-	while (count > 1) /* ...and make this count > 0? */
+	while (count >= 1) /* ...and make this count > 0? */
 	{
 		count = read(fd1, buf, bufsize);
 		if (count == -1)
