@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 	count = bufsize;
 
-	while (count < 1024)
+	while (count >= 1024)
 	{
 		count = read(fd1, buf, bufsize);
 		if (count == -1)
