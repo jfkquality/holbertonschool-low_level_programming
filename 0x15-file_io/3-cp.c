@@ -38,9 +38,11 @@ int main(int argc, char *argv[])
 
 	count = bufsize; /* Don't set this?... */
 
-	while (count > 1023) /* ...and make this count > 0? */
+	while (count != 0) /* ...and make this count > 0? */
 	{
 		count = read(fd1, buf, bufsize);
+		if (count == 0)
+			break;
 		if (count == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		wrote = write(fd2, buf, count);
