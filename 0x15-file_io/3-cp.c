@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	fd1 = open(file1, O_RDONLY, 0664);
 	/* while ((fd1 = open(file1, O_CREAT | O_RDONLY, 0662) == -1) */
 	if (fd1 == -1)
-		dprintf(STDERR_FILENO, "Can't read from %s\n", file1), exit(98);
+		dprintf(STDERR_FILENO, "Can't read from file %s\n", file1), exit(98);
 
 	fd2 = open(file2, O_CREAT | O_EXCL | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 < 0)
