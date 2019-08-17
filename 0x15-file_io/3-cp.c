@@ -25,26 +25,26 @@ int main(int argc, char *argv[])
 	file1 = argv[1];
 	file2 = argv[2];
 	fd1 = open(file1, O_RDONLY, 0664);
-	/* while ((fd1 = open(file1, O_CREAT | O_RDONLY, 0662) == -1) */
+	/* while ((fd1 = open(file1, O_CREAT | O_RDONLY, 0664) == -1) */
 	if (fd1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 
 	fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	/* if (fd2 < 0) */
 	/* fd2 = open(file2, O_WRONLY | O_TRUNC); */
-	/* while ((fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0662) == -1) */
+	/* while ((fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664) == -1) */
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 
-	count = bufsize;
+	count = bufsize; /* Don't set this?... */
 
-	while (count != 0)
+	while (count > 1) /* ...and make this count > 0? */
 	{
 		count = read(fd1, buf, bufsize);
 		if (count == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		wrote = write(fd2, buf, count);
-		if (wrote == -1)
+		if (wrote == -1) /* Include || wrote !+ count? */
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	}
 	closed = (close(fd1));
