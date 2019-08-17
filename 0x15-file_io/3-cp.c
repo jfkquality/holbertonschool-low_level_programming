@@ -29,25 +29,25 @@ int main(int argc, char *argv[])
 	fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
-	count = bufsize; /* Don't set this?... */
+	count = read(fd1, buf, bufsize);
+	if (count == -1)
+	{
+		close(fd1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
+	}
 	while (count > 0) /* ...and make this count > 0? */
 	{
-		count = read(fd1, buf, bufsize);
-		/* if (count == 0) */
-		/* { */
-		/* close(fd1); */
-		/* break; */
-		/* } */
-		if (count == -1)
-		{
-			close(fd1);
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
-		}
 		wrote = write(fd2, buf, count);
 		if (wrote == -1) /* Include || wrote !+ count? */
 		{
 			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
+		}
+		count = read(fd1, buf, bufsize);
+		if (count == -1)
+		{
+			close(fd1);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		}
 	}
 	if (close(fd1) == -1)
