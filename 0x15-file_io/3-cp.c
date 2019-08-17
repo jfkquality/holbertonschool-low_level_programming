@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		close(fd1);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 	}
-	while (count > 0) /* ...and make this count > 0? */
+	while (count > 1024) /* ...and make this count > 0? */
 	{
 		wrote = write(fd2, buf, count);
 		if (wrote == -1) /* Include || wrote !+ count? */
