@@ -41,12 +41,14 @@ int main(int argc, char *argv[])
 	while (count != 0) /* ...and make this count > 0? */
 	{
 		count = read(fd1, buf, bufsize);
-		if (count == 0)
-			break;
+		/* if (count == 0) */
+		/* 	break; */
 		if (count == -1)
+			close(fd1);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		wrote = write(fd2, buf, count);
 		if (wrote == -1) /* Include || wrote !+ count? */
+			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	}
 	closed = (close(fd1));
