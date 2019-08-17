@@ -33,11 +33,11 @@ int main(int argc, char *argv[])
 	while (count > 0) /* ...and make this count > 0? */
 	{
 		count = read(fd1, buf, bufsize);
-		if (count == 0)
-		{
-			close(fd1);
-			break;
-		}
+		/* if (count == 0) */
+		/* { */
+		/* close(fd1); */
+		/* break; */
+		/* } */
 		if (count == -1)
 		{
 			close(fd1);
