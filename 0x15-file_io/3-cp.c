@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	count = bufsize;
-	while (count != 0) /* ...and make this count > 0? */
+	while ((count = read(fd1, buf, bufsize))) /* ...and make this count > 0? */
 	{
-		count = read(fd1, buf, bufsize);
+		/* count = read(fd1, buf, bufsize); */
 		if (count == -1)
 		{
 			close(fd1);
