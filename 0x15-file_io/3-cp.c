@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file1 = argv[1];
 	file2 = argv[2];
-	fd1 = open(file1, O_RDONLY, 0664);
+	fd1 = open(file1, O_RDONLY);
 	if (fd1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 	fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
