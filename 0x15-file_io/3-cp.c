@@ -16,7 +16,7 @@
 int main(int argc, char *argv[])
 {
 	char *buf[1024], *file1, *file2;
-	ssize_t count, wrote, bufsize = 1024;
+	ssize_t count, wrote; /* , bufsize = 1024; */
 	int fd1, fd2; /* closed */
 
 	if (argc != 3)
@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
 	fd2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
-	count = bufsize;
-	while ((count = read(fd1, buf, sizeof(buf)) /* ...and make this count > 0? */
+	/* count = bufsize; */
+	while ((count = read(fd1, buf, sizeof(buf))))
 	{
 		/* count = read(fd1, buf, sizeof(buf)); */ /* change from bufsize */
 		if (count == -1)
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		}
 		wrote = write(fd2, buf, count);
-		if (wrote == -1 || wrote != count) /* Include || wrote !+ count? */
+		if (wrote == -1 || wrote != count) /* Include || wrote != count? */
 		{
 			close(fd1);
 			close(fd2);
@@ -51,5 +51,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
 	if (close(fd2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
-	return (wrote);
+	return (0);
 }
