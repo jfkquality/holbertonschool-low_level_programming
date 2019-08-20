@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	count = bufsize;
-	while (count) /* ...and make this count > 0? */
+	while ((count = read(fd1, buf, sizeof(buf)) /* ...and make this count > 0? */
 	{
-	  count = read(fd1, buf, sizeof(buf)); /* change from bufsize */
+		/* count = read(fd1, buf, sizeof(buf)); */ /* change from bufsize */
 		if (count == -1)
 		{
 			close(fd1);
