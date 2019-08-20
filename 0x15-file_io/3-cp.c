@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	count = bufsize;
 	while (count) /* ...and make this count > 0? */
 	{
-		count = read(fd1, buf, bufsize);
+	  count = read(fd1, buf, sizeof(buf)); /* change from bufsize */
 		if (count == -1)
 		{
 			close(fd1);
