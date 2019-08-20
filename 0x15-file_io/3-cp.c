@@ -16,7 +16,8 @@
 int main(int argc, char *argv[])
 {
 	char *buf[1024], *file1, *file2;
-	int count, wrote, bufsize = 1024, fd1, fd2; /* closed */
+	ssize_t count, wrote, bufsize = 1024;
+	int fd1, fd2; /* closed */
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -38,8 +39,6 @@ int main(int argc, char *argv[])
 			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		}
-		if (count == 0)
-			break;
 		wrote = write(fd2, buf, count);
 		if (wrote == -1 || wrote != count) /* Include || wrote !+ count? */
 		{
