@@ -35,11 +35,15 @@ int main(int argc, char *argv[])
 		if (count == -1)
 		{
 			close(fd1);
+			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		}
+		if (count == 0)
+			break;
 		wrote = write(fd2, buf, count);
-		if (wrote == -1) /* Include || wrote !+ count? */
+		if (wrote == -1 || wrote != count) /* Include || wrote !+ count? */
 		{
+			close(fd1);
 			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 		}
