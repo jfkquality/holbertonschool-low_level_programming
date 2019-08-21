@@ -14,7 +14,6 @@ int getlen(char *s)
 
 	for (; *s11; s11++, l++)
 		;
-
 	return (l);
 }
 
@@ -25,42 +24,41 @@ int getlen(char *s)
  *
  * Return: pointer to array
  */
+
+/* char *str_concat(char *s1, char *s2) */
 char *argstostr(int ac, char **av)
 {
-
-	unsigned int l1 = 0;
-	unsigned int l2 = 0;
-	unsigned int i = 0;
-	unsigned int j = 0;
-	unsigned int newlen = 0;
-	char *str1 = s1;
-	char *str2 = s2;
+	int i = 0;
+	int j = 0;
+	int newlen = 0;
 	char *p;
+	char *p1;
 
-	if (!str1)
-		str1 = "";
-
-	if (!str2)
-		str2 = "";
-
-	/* l1 = getlen(str1); */
-	/* l2 = getlen(str2); */
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	while (i < ac)
+	{
 		newlen += getlen(av[i]);
+		i++;
+	}
 
-	p = malloc((newlen + ac) * sizeof(char) + 1);
+	p1 = malloc((newlen + ac) * sizeof(char) + 1);
+	p = p1;
 	if (p == NULL)
 	{
 		return (NULL);
 	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; j < getlen(av[i]); j++, p++)
+		{
+			*p = av[i][j];
+		}
+		*p = '\n';
+		p++;
+	}
+	p = '\0';
 
-	for (i = 0; i < l1; i++)
-		p[i] = s1[i];
-
-	for (j = 0; j < l2; i++, j++)
-		p[i] = s2[j];
-	p[i] = '\0';
-
-	return (p);
+	return (p1);
 }
