@@ -9,9 +9,12 @@
  */
 int main(void)
 {
-	write(STDERR_FILENO, "and that piece of art is useful\" \
-- Dora Korpar, 2015-10-19\n", strlen("and that piece of art is useful\" \
-	- Dora Korpar, 2015-10-19\n"));
+	char *a1 = "and that piece of art is useful\"";
+	int len1 = strlen("and that piece of art is useful\"");
+	char *a2 = "- Dora Korpar, 2015-10-19\n";
+	int len2 = strlen("- Dora Korpar, 2015-10-19\n");
+	write(STDERR_FILENO, a1, len1);
+	write(STDERR_FILENO, a2, len2);
 
 	return (1);
 }
