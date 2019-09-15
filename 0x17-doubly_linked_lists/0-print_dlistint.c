@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdlib.h>		/*  */
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
@@ -27,12 +27,12 @@ size_t print_dlistint(const dlistint_t *h)
 
 
 /* This is from 0x13-more_singly_linked_lists #0 */
-/**
- * print_listint - print entire linked list
- * @h: linked list
- *
- * Return: i, num of elements in list
- */
+
+ /* * print_listint - print entire linked list */
+ /* * @h: linked list */
+ /* * */
+ /* * Return: i, num of elements in list */
+
 /* size_t print_listint(const listint_t *h) */
 /* { */
 /*         int i = 0; */
