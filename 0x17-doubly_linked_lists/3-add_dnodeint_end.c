@@ -13,7 +13,7 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	/* size_t i; */
+	/* size_t i = 0; */
 	dlistint_t *new;
 	dlistint_t *current;
 	dlistint_t **head1 = head;
@@ -26,11 +26,15 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (0);
 	}
 	new->n = n;
-	/* *h1->prev = new; */
+	new->prev = NULL;
 	new->next = NULL;
 
 	/* Find end of list. Set current.next, new.prev.*/
-	if (*head1)
+	if (!*head1)
+	{
+		*head1 = new;
+	}
+	else
 	{
 		current = *head1;
 		while (current->next)
@@ -39,11 +43,10 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		}
 		current->next = new;
 		new->prev = current;
-	}
-	else
-	{
-		*head1 = new;
-		new->prev = *head1;
+
+		/* printf("new.prev %d\n", (new->prev->n)); */
+		/* printf("current.next %d\n", (current->next->n)); */
+		/* printf("new.n %d\n", new->n); */
 	}
 	return (*head1);
 }
