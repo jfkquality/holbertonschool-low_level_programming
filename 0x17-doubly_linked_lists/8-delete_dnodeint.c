@@ -15,26 +15,30 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int node;
 	dlistint_t *current;
-	dlistint_t *temp;
+	/* dlistint_t *temp; */
 
 	if (*head)
 	{
 		current = *head;
+		/* printf("current %lu\n", current); */
 
 		if (index == 0)
 		{
 			*head = current->next;
+			/* (*head)->prev = NULL; */
 			free(current);
 			return (1);
 		}
-		node = 0;
+
+		node = 1;
 		while (current)
 		{
-			if (node == index - 1)
+			if (node == index)
 			{
-				temp = current->next;
-				current->next = current->next->next;
-				free(temp);
+				/* temp = current->next; */
+				current->prev->next = current->next;
+				current->next->prev = current->prev;
+				free(current);
 				return (1);
 			}
 			node++;
