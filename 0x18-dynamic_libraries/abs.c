@@ -1,2 +1,4 @@
 int abs(int n)
-{ return (0); }
+{
+	return (0);
+}
