@@ -35,7 +35,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (*head);
 	}
 
-	(*head)->prev = new;
+	(*head)->prev = new; /* USE THE FUCKING PARENTHESIS!! */
 	new->next = *head;
 	new->prev = NULL;
 	*head = new;
