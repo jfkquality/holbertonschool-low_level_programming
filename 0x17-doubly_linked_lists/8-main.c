@@ -63,7 +63,6 @@ int main(void)
 	printf("-----------------\n");
 	delete_dnodeint_at_index(&head, 0);
 	printf("-----------------\n");
-	printf("Why is this seg faulting?\n");
 	delete_dnodeint_at_index(&head, 0);
 	print_dlistint(head);
 	return (0);
