@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	new = malloc(sizeof(hash_table_t));
 	if (new == NULL || isdigit(size) > 0)
-                return (NULL);
+		return (NULL);
 
 
 	new->size = size;
