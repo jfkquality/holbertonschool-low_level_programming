@@ -15,7 +15,7 @@ void bubble_sort(int *array, size_t size)
 	int temp = 0;
 
 
-	if 9size  >= 2)
+	if (size  >= 2)
 	{
 	/* True bubble sort way */
 		while (i < size - 1)
