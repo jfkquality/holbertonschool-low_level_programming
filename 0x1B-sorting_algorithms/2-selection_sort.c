@@ -24,7 +24,7 @@ void selection_sort(int *array, size_t size)
 		/* assume the min is the first element */
 		jMin = i;
 		/* test against elements after i to find the smallest */
-		for (j = i+1; j < size; j++)
+		for (j = i + 1; j < size; j++)
 		{
 			/* if this element is less, then it is the new minimum */
 			if (array[j] < array[jMin])
