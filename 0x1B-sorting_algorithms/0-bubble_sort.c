@@ -14,7 +14,6 @@ void bubble_sort(int *array, size_t size)
 	size_t i = 0, j = 0 /* , newsize */;
 	int temp = 0;
 
-
 	if (size  >= 2)
 	{
 	/* True bubble sort way */

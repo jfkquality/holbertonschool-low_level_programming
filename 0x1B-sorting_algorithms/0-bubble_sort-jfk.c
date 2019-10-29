@@ -7,7 +7,7 @@ void bubble_sort(int *array, size_t size)
 	size_t i = 0, j = 0 /* , newsize */;
 	int temp = 0;
 
-	/* True bubble sort way */
+	/* True bubble sort solution */
 	while (i < size - 1)
 	{
 		j = 0;
@@ -28,7 +28,7 @@ void bubble_sort(int *array, size_t size)
 		i++;
 	}
 
-	/* My way. Less loop? But not true bubble? */
+	/* My solution. Less loop? But not true bubble? */
 	/* while (i < size) */
 	/* { */
 	/* 	j = i + 1; */
@@ -50,7 +50,7 @@ void bubble_sort(int *array, size_t size)
 	/* } */
 
 
-	/* Another way; translated from Python */
+	/* Another solution; translated from Python */
 	/* while (size > 1) */
 	/* { */
 	/* 	newsize = 0; */
