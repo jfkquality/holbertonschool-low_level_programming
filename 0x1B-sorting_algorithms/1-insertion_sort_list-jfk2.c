@@ -45,9 +45,11 @@ void insertion_sort_list(listint_t **list)
 		{
 			/* swap(current, prev); */
 			ptr->prev->next = ptr->next;
-
 			if (ptr->next )
+			{
 				ptr->next->prev = ptr->prev;
+				/* print_list(*list); */
+			}
 			if (!temp)
 			{
 				temp = *list;
@@ -55,7 +57,7 @@ void insertion_sort_list(listint_t **list)
 				ptr->next = temp;
 				ptr->next->prev = ptr;
 				*list = ptr;
-				/* print_list(*list); */
+				print_list(*list);
 			}
 			else
 			{
@@ -64,11 +66,11 @@ void insertion_sort_list(listint_t **list)
 				ptr->prev = temp->prev;
 				temp->prev = ptr;
 				ptr->next = temp;
-				/* print_list(*list); */
+				print_list(*list);
 			}
-			print_list(*list);
+			/* print_list(*list); */
 		}
-		print_list(*list);
+		/* print_list(*list); */
 	}
 	print_list(*list);
 }

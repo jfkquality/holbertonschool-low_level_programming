@@ -11,6 +11,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
+/* From https://en.wikipedia.org/wiki/Selection_sort */
 /* a[0] to a[aLength-1] is the array to sort */
 	size_t i, j, jMin;
 	int temp;

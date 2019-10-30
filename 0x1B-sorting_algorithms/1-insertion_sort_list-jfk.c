@@ -1,5 +1,20 @@
 #include "sort.h"
 
+
+/* void swap(listint_t *current, listint_t *prev, listint_t *head) */
+/* { */
+	/* listint_t *temp = current; */
+	/* printf("in swap"); */
+
+
+
+	/* current->prev->next = current->next; */
+	/* current->next->prev = current->prev; */
+	/* current->next->next = current; */
+	/* current->next = temp->next->next; */
+	/* current->prev = temp->next; */
+/* } */
+
 /**
  * insertion_sort_list - insertion sort on dlink_list
  * @list: list to sort
@@ -9,122 +24,94 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	/* If node.n > node.next.n => swap */
-	/* i.e. */
-	/* Continue until node.n < node.next.n. Remember this node. */
-	/* Check if node.prev.n is correct. Go up the list until it is, */
+	/* Advance curr node (node.n) through list */
+	/* If node.n (curr) > node.next.n => swap */
+	/* i.e. move current past next; but first (in relation to curr): */
+	/* change prev-next (curr-prev-next) to next (curr-next);*/
+	/* change next-prev (curr-next-prev) to prev (curr-prev)*/
+	/* change curr-next to next-next (curr-next-next) */
+	/* change next-next (curr-next-next) to curr */
+	/* If at bottom, curr-next = NULL */
+	/* Remember moved node.n (curr). */
+	/* */
+	/* If curr was moved: */
+	/* Check if node.prev.n < node.prev.prev.n. Go up the list until it is, */
 	/* i.e. node.prev.prev.n < node.prev.n.  */
-	/* Go back to node.n. */
+	/* If need to swap: move to prev & repeat above swap */
+	/* If at top, node-prev = NULL */
+	/* */
+	/* Go back to curr (original node.n). */
 	/* Go to node.next */
 	/* Rinse and repeat */
 
-	listint_t *current = *list;
-	listint_t *temp = current;
-	listint_t *next = current->next;
+	listint_t *current = *list; /* i.e. "left" */
+	/* listint_t *head = *list; */
+	/* listint_t *temp /\* = current *\/; */
+	listint_t *next = current->next; /* i.e. "right" */
 	listint_t *prev = current->prev;
+	int changed = 0;
 
 	/* const int val = *list->n; */
 
-	if (current->next == NULL)
+	if (!next)
 		return;
 
-	while (current)
+	while (current->next)
 	{
-		/* temp = current; */
-		/* next = current->next; */
-		/* prev = current->prev; */
-
-		ptr = current;
-		temp = current->prev;
-		current = current->next;
-
-		/* while (current->n > current->next->n) /\* swap curr/next *\/ */
-		while (!temp && temp->n > ptr->n) /* swap curr/next */
+		changed = 0;
+		next = current->next; /* i.e. "right" */
+		prev = current->prev;
+		while (prev && prev->n > current->n)
 		{
-			temp = temp->prev;
+			printf("interating\n");
+			prev = prev->prev;
+			changed++;
 		}
-			/* printf("in 1st loop\n"); */
-			/* temp = current; */
-			/* next = current->next; */
-			/* prev = current->prev; */
-
-			/* current = current->next; */
-			/* current->next = next->next; */
-			/* current->prev = next; */
-
-			/* next->next = temp; */
-			/* next->prev = temp->prev; */
-			/* prev->next = temp->next; */
-			/* prev = temp->next; */
-			/* next = temp->next->next; */
-
-			/* current->prev->next = current->next; */
-			/* current->prev = current->next; */
-			/* current->next->prev = temp->prev; */
-			/* current->next = current->next->next; */
-
-			/* current->next->next = current; */
-			/* current->next->prev = current->prev; */
-			/* current->prev->next = current->next; */
-			/* current->prev = temp->next; */
-			/* current->next = temp->next->next; */
-
-			/* next->next = current; */
-			/* current = next->prev; */
-
-			/* printf("print list #1 \n"); */
-			/* print_list(*list); */
-
-			/* DON'T MOVE CURRENT WHEN DONE */
-
-			/* current->next->next = current; */
-			/* current->next->prev = current->prev; */
-			/* current->prev = current->next; */
-			/* current->next = temp->next->next; */
-		}
-		/* printf("print list #2 (%d) \n", current->n); */
-		/* print_list(*list); */
-
-		/* if (temp->next != current->next) /\* i.e. current has moved *\/ */
-		if (ptr->next != current->next) /* i.e. current has moved */
+		if (changed)
 		{
-			ptr->prev->next = ptr->next;
-			if (ptr->next)
-				ptr->next->prev = ptr->prev;
-
-			if (!temp)
-			{
-				tmp = *list;
-				ptr->prev = NULL;
-				ptr->next = tmp;
-				ptr->next->prev = ptr;
-				*list = ptr;
-			}
+			/* swap(current, prev); */
+			/* https://vparticles.com/data%20stuctures/doubly-linked-lists/ */
+			if ( prev )
+				prev->next = next;
 			else
-			{
-				temp = temp->next;
-				temp->prev->next = ptr;
-				ptr->prev = temp->prev;
-				tmp->prev = ptr;
-				ptr->next = temp;
-			}
+				*list = next;
+
+			if ( next->next )
+				next->next->prev = current;
+
+			current->next  = next->next;
+			next->prev = current->prev;
+			next->next = current;
+			current->prev = next;
 		}
-
-			/* printf("print list #3 (%d) \n", current->n); */
-			/* prev = current->prev; */
-			/* next = current->next; */
-
-	/* 		while (prev->n < prev->prev->n) */
-	/* 		{ */
-	/* 			/\* swap prev and prev->prev *\/ */
-	/* 			temp = prev; */
-	/* 			prev->prev = temp->prev->prev; */
-	/* 			prev->next = temp->prev; /\* fix this? *\/ */
-	/* 			prev->prev->next = temp->next; */
-	/* 			prev->prev->prev = temp; */
-	/* 		} */
-	/* 	} */
-	/* 	current = current->next; */
-	/* } */
-
+		current = current->next;
+	}
 }
+
+
+
+/* 		while (current->prev->n > current->n) /\*interate thru until not *\/ */
+/* 		{ */
+/* 			current = current->next; */
+/* 		} */
+/* 		temp = current; */
+
+/* 		if (change) */
+/* 		{ */
+/* 			while (current->prev) */
+/* 			{ */
+
+/* 				while (current->prev->n < current->prev->prev->n) */
+/* 				{ */
+/* 					printf("swap prev w prev-prev"); */
+/* 					swap(current->prev->prev); */
+/* 					current = current->prev; */
+/* 				} */
+/* 				current=current->prev; */
+/* 			} */
+/* 		change = 0; */
+/* 		/\* current = temp; *\/ */
+/* 		} */
+/* 		current = temp->next; */
+/* 	} */
+/* } */
