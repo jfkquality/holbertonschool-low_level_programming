@@ -5,8 +5,6 @@ SRC := $(wildcard *.c)
 # XFLAGS = -o
 # EXEC = holberton
 
-all: holberton
-
-holberton:
+all:
 	$(CC) $(SRC) -o holberton
 # gcc holberton.c main.c -o holberton
