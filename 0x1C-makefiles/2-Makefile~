@@ -1,9 +1,10 @@
 # _*_ MakeFile _*_
 CC = gcc
-SRC = $(wildcard *.c)
+SRC := $(wildcard *.c)
+OBJ :=$(wildcard *.o)
 # CFLAGS = -c
 # XFLAGS = -o
-# EXEC = holberton
+NAME = holberton
 
 all:
 	$(CC) $(SRC) -o holberton
