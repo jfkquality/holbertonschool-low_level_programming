@@ -1,10 +1,13 @@
 # _*_ MakeFile _*_
+# _*_ MakeFile _*_
 CC = gcc
-CFLAGS = -c
-XFLAGS = -o
-EXEC = holberton
+SRC := $(wildcard *.c)
+OBJ :=$(wildcard *.o)
+# CFLAGS = -c
+# XFLAGS = -o
+NAME = holberton
 
-all: holberton main
+all: holberton
 
 holberton: holberton.o main.o
 	gcc holberton.o main.o -o holberton

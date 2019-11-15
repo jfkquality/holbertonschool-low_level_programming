@@ -4,7 +4,7 @@ CFLAGS = -c
 XFLAGS = -o
 EXEC = holberton
 
-all: holberton main
+all: holberton
 
 holberton: holberton.o main.o
 # gcc holberton.o main.o -o holberton
