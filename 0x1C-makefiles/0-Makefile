@@ -1,8 +1,11 @@
 # _*_ MakeFile _*_
 # CC = gcc
+# SRC := $(wildcard *.c)
 # CFLAGS = -c
 # XFLAGS = -o
 # EXEC = holberton
 
-all:
+all: holberton
+
+holberton:
 	gcc holberton.c main.c -o holberton
