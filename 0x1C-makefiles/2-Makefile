@@ -5,5 +5,5 @@ OBJ = main.o holberton.o
 NAME = holberton
 
 all:
-	$(CC) -c $(SRC)
-	$(CC) $(OBJ) -o holberton
+	$(CC) -c -o $(SRC)
+	$(CC) $(OBJ) -o $(NAME)
