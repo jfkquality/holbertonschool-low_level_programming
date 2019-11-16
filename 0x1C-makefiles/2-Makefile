@@ -2,11 +2,8 @@
 CC = gcc
 SRC = main.c holberton.c
 OBJ = main.o holberton.o
-# CFLAGS = -c
-# XFLAGS = -o
 NAME = holberton
 
 all:
 	$(CC) -c $(SRC)
 	$(CC) $(OBJ) -o holberton
-# gcc holberton.c main.c -o holberton
