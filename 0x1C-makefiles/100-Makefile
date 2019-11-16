@@ -1,0 +1,22 @@
+# _*_ MakeFile _*_
+CC = gcc
+SRC = main.c holberton.c
+OBJ = :=$(wildcard *.o)
+NAME = holberton
+RM = re:
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all:
+	$(CC) -c $(SRC)
+	$(CC) $(OBJ) $(CFLAGS) -o $(NAME)
+
+clean:
+	rm *~ *# *.swp holberton
+
+oclean:
+	rm *.o
+
+fclean:
+	rm *~ *# *.o holberton
+
+re: oclean all
