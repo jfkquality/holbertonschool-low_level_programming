@@ -7,4 +7,3 @@ SRC = main.c holberton.c
 
 all:
 	$(CC) $(SRC) -o holberton
-# gcc holberton.c main.c -o holberton
