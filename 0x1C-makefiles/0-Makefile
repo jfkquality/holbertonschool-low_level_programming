@@ -1,8 +1,2 @@
-# _*_ MakeFile _*_
-# CC = gcc
-# CFLAGS = -c
-# XFLAGS = -o
-# EXEC = holberton
-
 all:
 	gcc holberton.c main.c -o holberton

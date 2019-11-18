@@ -1,5 +1,4 @@
 # _*_ MakeFile _*_
-# _*_ MakeFile _*_
 CC = gcc
 SRC := $(wildcard *.c)
 OBJ :=$(wildcard *.o)
