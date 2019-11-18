@@ -1,21 +1,26 @@
 # _*_ MakeFile _*_
 CC = gcc
 SRC = main.c holberton.c
-OBJ = :=$(wildcard *.o)
+OBJ = $(SRC:.c=.o)
 NAME = holberton
-RM = re:
+RM = rm
 
-all:
-	$(CC) -c $(SRC)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME)
+
+%.o: %.c %.h
+	$(CC) -c $^
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
 
 clean:
-	rm *~ *# *.swp holberton
+	$(RM) -f *~ $(NAME)
 
 oclean:
-	rm *.o
+	$(RM) -f $(OBJ)
 
 fclean:
-	rm *~ *# *.o holberton
+	$(RM) -f *~ *.o $(NAME)
 
-re: oclean all
+re:
+	$(RM) -f $(OBJ)
