@@ -35,21 +35,21 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int /* lperfect = 0, rpefect = 0, */ dleft = 0, dright = 0; /* , height = 0 */;
+	int lperfect = 0, rperfect = 0, dleft = 0, dright = 0; /* , height = 0 */;
 
 	if (tree == NULL)
 		return (0);
 	if (!tree->left && !tree->right)
 		return (1);
-	dleft =  (binary_tree_depth(tree->left));
-	dright = (binary_tree_depth(tree->right));
+	dleft =  (binary_tree_height(tree->left));
+	dright = (binary_tree_height(tree->right));
 	if (dleft == dright)
 	{
 		if (tree->left && tree->right)
 		{
-			/* lfull = binary_tree_is_full(tree->left); */
-			/* rfull = binary_tree_is_full(tree->right); */
-			return (1);
+			lperfect = binary_tree_is_perfect(tree->left);
+			rperfect = binary_tree_is_perfect(tree->right);
+			return (lperfect && rperfect);
 		}
 	}
 	return (0);
