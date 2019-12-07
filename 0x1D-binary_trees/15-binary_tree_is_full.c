@@ -21,10 +21,5 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		rfull = binary_tree_is_full(tree->right);
 		return (lfull && rfull);
 	}
-
-	/* if (tree->left != NULL) */
-	/* 	lheight = binary_tree_balance(tree->left) + 1; */
-	/* if (tree->right != NULL) */
-	/* 	rheight = binary_tree_balance(tree->right) + 1; */
 	return (0);
 }
