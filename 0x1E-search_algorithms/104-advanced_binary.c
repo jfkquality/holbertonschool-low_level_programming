@@ -34,7 +34,7 @@ int advanced_binary(int *array, size_t size, int value)
 		else
 			found = m;
 	}
-	else if (array[m] < value)
+	else if (array[m] <= value)
 	{
 		found = advanced_binary(array + m + 1, size - m - 1, value);
 
