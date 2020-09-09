@@ -2,7 +2,7 @@
 #include <assert.h>
 
 /**
- * binary_search - search for value in array of ints use Linear search algorthm
+ * advanced_binary - find first occuurence of value w binary search recursion.
  *
  * @array: pointer to the first element array to traverse
  * @size: is the number of elements in array
