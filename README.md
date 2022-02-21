@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://www.holbertonschool.com/holberton-logo.png">
+  <img src="https://sunway.edu.np/wp-content/uploads/2019/08/hello_world.png">
 </p>
 
 # Low Level Programming
